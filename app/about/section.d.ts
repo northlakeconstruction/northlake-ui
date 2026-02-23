@@ -1,4 +1,4 @@
-export type AboutPageProps {
+export type AboutPageProps = {
     params: Promise<{
         section: string
     }>
