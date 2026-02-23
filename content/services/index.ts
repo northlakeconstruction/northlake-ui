@@ -4,6 +4,9 @@ import { Service } from './service'
 const services: Record<string, Service> = {
     paving: {
         title: "Paving Contractor in Chicago",
+        description: "Paving description",
+        serviceType: "Asphalt Paving",
+        url: 'https://northlake-construction.com/services/paving',
         Page: Paving,
     }
 }
