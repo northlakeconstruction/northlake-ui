@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
 import createMDX from '@next/mdx';
-import next from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */

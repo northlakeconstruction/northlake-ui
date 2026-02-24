@@ -2,7 +2,7 @@
 const Footer = () => {
 
     return (
-        <footer className="w-full bg-gray-800 text-white p-4">
+        <footer className="w-full p-4 border-t-4 border-primary-fg">
             <div className="xs:flex-col align-between gap-4 md:flex justify-between items-center">
                 <div className="xs: text-center md:flex-col gap-4 text-left">
                     <address className="xs: text-center md:text-left">

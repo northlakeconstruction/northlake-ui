@@ -4,10 +4,10 @@ const Header = (props: HeaderProps) => {
     const { categories } = props
     
     return (
-        <header className="fixed top-0 left-0 w-full p-4 bg-gray-800 text-white">
+        <header className="fixed top-0 left-0 w-full p-4 bg-primary text-primary-fg border-b-4 border-primary-fg">
             <div className="flex items-center justify-between gap-8">
-                <div>
-                    Northlake Construction
+                <div className="text-primary-fg">
+                    <h1>Northlake Construction</h1>
                 </div>
                 <div className="flex gap-4">
                     {Object.entries(categories).map(([key, value]) => {
