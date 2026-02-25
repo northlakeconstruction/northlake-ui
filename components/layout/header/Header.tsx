@@ -1,3 +1,4 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import { type HeaderProps } from './HeaderProps'
 import {
@@ -11,12 +12,14 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Header = (props: HeaderProps) => {
     const { categories } = props
-    
+    const router = useRouter()
+
     return (
-        <header className="sticky top-0 w-full p-4 text-primary-fg border-b-4 bg-background">
+        <header className="sticky top-0 w-full p-4 text-primary-fg border-b-4 border-primary bg-background">
             <div className="flex justify-between">
                 <Link href={"/"}>
                     <h1>Northlake Construction</h1>
@@ -63,7 +66,7 @@ const Header = (props: HeaderProps) => {
                             </SheetContent>
                         </Sheet>
                     </div>
-                    <Button>Contact</Button>
+                    <Button onClick={() => router.push("/contact")}>Contact</Button>
                 </nav>
             </div>
         </header>

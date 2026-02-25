@@ -6,8 +6,8 @@ const Footer = () => {
             <div className="xs:flex-col align-between gap-4 md:flex justify-between items-center">
                 <div className="xs: text-center md:flex-col gap-4 text-left">
                     <address className="xs: text-center md:text-left">
-                        1950 West 43rd St. <br />
-                        Chicago, IL 60609
+                        3119 N Karlov St.<br />
+                        Chicago, IL 60641
                     </address>
                 </div>
                 <div className="flex-col gap-2 text-center">

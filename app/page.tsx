@@ -1,6 +1,4 @@
 import { SummaryCardArea } from "@/components/layout/summaryCardArea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 const services = [
   {
@@ -82,21 +80,19 @@ const featuredProjects = [
 
 export default function Home() {
   return (
-    <div className="pt-16 p-8">
-      <main>
-        {/* Hero */}
-        <h2 className="py-4">I Can Be Your Hero Baby</h2>
-        {/* Services */}
-        <h2 className="py-4">Services</h2>
-        <SummaryCardArea summaryCards={services} />
-        {/* Featured Projects */}
-        <h2 className="py-4">Featured Projects</h2>
-        <SummaryCardArea summaryCards={featuredProjects} />
-        {/* About */}
-        <h2 className="py-4">About</h2>
-        {/* Contact */}
-        <h2 className="py-4">Contact</h2>
-      </main>
-    </div>
+    <main>
+      {/* Hero */}
+      <h2 className="py-4">Paving Contractor in Chicago</h2>
+      {/* Services */}
+      <h2 className="py-4">Services</h2>
+      <SummaryCardArea summaryCards={services} />
+      {/* Featured Projects */}
+      <h2 className="py-4">Featured Projects</h2>
+      <SummaryCardArea summaryCards={featuredProjects} />
+      {/* About */}
+      <h2 className="py-4">About</h2>
+      {/* Contact */}
+      <h2 className="py-4">Contact</h2>
+    </main>
   );
 }
