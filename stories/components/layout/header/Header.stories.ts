@@ -11,6 +11,29 @@ type Story = StoryObj<typeof Header>
 
 export const Primary: Story = {
   args: {
-    categories: { services: [], "featured projects": [], about: []}
+    categories: [
+      {
+        name: "Services",
+        link: "#/services",
+        subCategory: [
+          {
+            name: "Paving",
+            link: "#/services/paving"
+          },
+          {
+            name: "Striping",
+            link: "#/services/striping"
+          }
+        ]
+      },
+      {
+        name: "Featured Projects",
+        link: "#/projects",
+      },
+      {
+        name: "About",
+        link: "#/about"
+      }
+    ]
   },
 }

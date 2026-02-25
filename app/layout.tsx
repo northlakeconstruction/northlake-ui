@@ -4,6 +4,7 @@ import localbusiness from "@/seo/metadata/localbusiness";
 import { Header } from "@/components/layout/header"
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
+import { sitemap } from "@/content/sitemap";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,9 +36,9 @@ export default function RootLayout({
         />
       </head>
       <html lang="en">
-        <body className="min-h-screen flex flex-col bg-black">
-          <Header categories={{ services: [], "featured projects": [], about: []}}/>
-          <main className="flex-1 container mx-auto px-6 py-8 bg-primary-bg">
+        <body className="min-h-screen flex flex-col">
+          <Header categories={sitemap}/>
+          <main className="flex-1 container mx-auto">
             {children}
           </main>
           <Footer />

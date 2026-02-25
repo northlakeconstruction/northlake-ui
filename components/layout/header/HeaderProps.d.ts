@@ -3,8 +3,14 @@ interface Link {
     target: string
 }
 
+interface Category {
+    name: string
+    link?: string
+    subCategory?: Category[]
+}
+
 interface HeaderProps {
-    categories: Record<string, Link>
+    categories: Category[]
 }
 
 export type {Link, HeaderProps}
