@@ -2,7 +2,9 @@
 
 @theme {
   --color-primary-bg: #ececec;
+  --color-primary-bg-hover: #c4c4c4;
   --color-primary-fg: #243650;
+  --color-primary-fg-hover: #4b6384;
   --color-primary-text: gray-900;
 }
 
@@ -29,10 +31,6 @@
 
   a {
     @apply text-blue-600 hover:underline;
-  }
-
-  button {
-    @apply font-medium transition-colors;
   }
 
   input,

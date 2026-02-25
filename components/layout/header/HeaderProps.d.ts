@@ -6,3 +6,5 @@ interface Link {
 interface HeaderProps {
     categories: Record<string, Link>
 }
+
+export type {Link, HeaderProps}

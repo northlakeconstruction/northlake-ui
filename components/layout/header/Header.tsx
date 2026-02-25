@@ -1,4 +1,4 @@
-import type HeaderProps from './HeaderProps'
+import { type HeaderProps } from './HeaderProps'
 
 const Header = (props: HeaderProps) => {
     const { categories } = props
