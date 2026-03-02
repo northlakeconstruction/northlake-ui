@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import localbusiness from "@/seo/metadata/localbusiness";
 import { Header } from "@/components/layout/header"
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { sitemap } from "@/content/sitemap";
+
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
+  subsets: ["latin"],
+  weight: ['500']
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +45,7 @@ export default function RootLayout({
       <html lang="en">
         <body className="min-h-screen flex flex-col">
           <Header categories={sitemap}/>
-          <main className="flex-1 container mx-auto">
+          <main className="flex-1">
             {children}
           </main>
           <Footer />

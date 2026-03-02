@@ -24,7 +24,7 @@ export default function Contact(){
                         </Field>
                         <Field className="py-2">
                             <FieldLabel htmlFor="desc">Tell Us About Your Project</FieldLabel>
-                            <Textarea id="desc" placeholder="Tell us about your project" type="text" />
+                            <Textarea id="desc" placeholder="Tell us about your project" />
                         </Field>
                         <div className="flex justify-end gap-4">
                             <Button variant="secondary">Clear</Button>

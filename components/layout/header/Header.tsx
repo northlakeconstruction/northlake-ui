@@ -13,16 +13,23 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const Header = (props: HeaderProps) => {
     const { categories } = props
     const router = useRouter()
 
     return (
-        <header className="sticky top-0 w-full p-4 text-primary-fg border-b-4 border-primary bg-background">
+        <header className="sticky top-0 w-full p-4 text-primary-fg bg-background z-50">
             <div className="flex justify-between">
                 <Link href={"/"}>
-                    <h1>Northlake Construction</h1>
+                    <Image
+                        src="/header-logo.png"
+                        alt="Northlake Construction corporate logo"
+                        height="75"
+                        width="210"
+                    />
+                    <p><i className="text-black">A Minority Business Enterprise</i></p>
                 </Link>
                 <nav className="flex items-center gap-6">
                     <NavigationMenu className="hidden md:flex gap-6">
