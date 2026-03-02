@@ -73,7 +73,7 @@ export default function Home() {
         >
           <div className="flex flex-col gap-10 items-start max-w-md">
             <h1 className="text-4xl md:text-5xl max-w-2xl">Northlake Construction</h1>
-            <h2 className="text-2xl md:text-3xl">A Chicago-based, MBE Certified, union asphalt paving and sitework contractor.</h2>
+            <h2 className="text-2xl md:text-3xl">A Chicago-based asphalt paving and sitework contractor.</h2>
             <Button>Get a Quote!</Button>
           </div>
         </Hero>
