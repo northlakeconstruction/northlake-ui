@@ -13,7 +13,7 @@ function Hero(props: HeroProps) {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#ececec]/100 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-bg/100 to-transparent"></div>
 
         {/* Text Container */}
         <div className="absolute inset-0 flex flex-col justify-center mw-1/2 md:justify-start md:pt-32 px-6 md:px-16 text-white">

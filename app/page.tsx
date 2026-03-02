@@ -41,18 +41,18 @@ const services = [
 
 const featuredProjects = [
   {
-    title: "City Park Parking Lot",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
-    detailLink: "/services/paving",
+    quote: "Our lot always flooded and iced over, Northlake fixed the drainage and now we don't worry about slips and falls",
+    byline: "Johnny Specials - HOA President",
+    detailLink: "/projects/driveway",
     image: {
       src: "/paver.png",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
     }
   },
   {
-    title: "Street Patching with Plumbers 911",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
-    detailLink: "/services/paving",
+    quote: "Ricky's crew showed up on short notice to open the street so we could make our emergency repair.",
+    byline: "Patty O'Plumber - Foreman Celtic Plumbing",
+    detailLink: "/projects/patching",
     image: {
       src: "/paver.png",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
@@ -62,6 +62,8 @@ const featuredProjects = [
 
 import { Hero } from "@/components/layout/hero/Hero";
 import { Button } from "@/components/ui/button";
+import { HorizontalCard } from "@/components/ui/horizontal-card";
+import { Testimonial } from "@/components/ui/testimonial";
 
 export default function Home() {
   return (
@@ -100,10 +102,17 @@ export default function Home() {
         <SummaryCardArea summaryCards={services} />
       </section>
 
-      <section className="py-6 bg-gray-200">
-        <SummaryCardArea summaryCards={featuredProjects} />
+      <section className="py-6">
+        {
+          featuredProjects.map((fp, index) => {
+            return (
+              <HorizontalCard key={fp.detailLink} image={fp.image.src} alt={fp.image.alt} imageLeft={(index & 0x1) == 1}>
+                <Testimonial quote={fp.quote} byline={fp.byline} detailLink={fp.detailLink} />
+              </HorizontalCard>
+            )
+          })
+        }
       </section>
-      
       <section className="py-6">
         <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
           <div className="flex flex-col gap-10 items-start">
