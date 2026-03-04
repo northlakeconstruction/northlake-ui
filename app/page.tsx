@@ -64,6 +64,7 @@ import { Hero } from "@/components/layout/hero/Hero";
 import { Button } from "@/components/ui/button";
 import { HorizontalCard } from "@/components/ui/horizontal-card";
 import { Testimonial } from "@/components/ui/testimonial";
+import { Contact } from "@/components/layout/contact";
 
 export default function Home() {
   return (
@@ -158,8 +159,8 @@ export default function Home() {
         </div>
         {/* Contact */}
       </section>
-      <section className="p-4">
-        <h2 className="text-center">Contact Us</h2>
+      <section>
+        <Contact />
       </section>
     </main>
   );
