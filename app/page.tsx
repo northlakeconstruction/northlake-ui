@@ -128,9 +128,39 @@ export default function Home() {
         </Hero>
       </section>
       {/* About */}
-      <h2 className="py-4">Who We Are</h2>
-      {/* Contact */}
-      <h2 className="py-4">Contact Us</h2>
+      <section className="bg-primary-fg p-4">
+        <h2 className="text-white text-center p-4">About Us</h2>
+        <div className="flex p-6 items-center gap-6 bg-white m-4">
+          <Image 
+            src="/ricky-portrait.png"
+            height={1000}
+            width={800}
+            alt="Founder Ricky Byrdsong Jr"
+            className="hidden md:block max-w-4/10"
+          />
+          <div className="flex flex-col bg-white p-4 gap-4">
+            <h2 className="text-center">Ricky Byrdsong Jr.</h2>
+            <i className="text-center">Founder</i>
+            <p className="indent-4">
+              My summer job as a construction laborer evolved into a lifelong profession. 
+              Through direct, hands-on experience I advanced to be a foreman for one of 
+              the largest paving subcontractors in Chicago. After <b>X</b> years leading projects I 
+              developed the 4 discplines of successful projects: <b>detailed planning, operational discipline, 
+              partnering with skilled labor, and following uncompromising safety and quality standards.</b>
+            </p>
+            <p className="indent-4">
+              As a certified Minority Business Enterprise, we serve as a strategic partner 
+              for organizations seeking to meet participation objectives without compromising 
+              performance. We approach every engagement with a long-term mindset emphasizing 
+              transparency, responsiveness, and disciplined execution. 
+            </p>
+          </div>
+        </div>
+        {/* Contact */}
+      </section>
+      <section className="p-4">
+        <h2 className="text-center">Contact Us</h2>
+      </section>
     </main>
   );
 }

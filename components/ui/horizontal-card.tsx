@@ -31,7 +31,7 @@ export function HorizontalCard(props: HorizontalCardProps) {
                     alt={alt}
                     className="hidden md:block md:max-w-4/10"
                 />
-            )}
+            )} 
         </div>
     )
 }
