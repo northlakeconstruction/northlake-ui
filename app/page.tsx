@@ -68,7 +68,7 @@ import { Testimonial } from "@/components/ui/testimonial";
 export default function Home() {
   return (
     <main>
-      <section className="py-6">
+      <section className="">
         <Hero 
           img="/paver.png" 
           alt="A paving crew in front of the Chicago skyline."
@@ -98,11 +98,12 @@ export default function Home() {
         </h1>
       </div> */}
       {/* Services */}
-      <section className="py-6">
+      <section className="bg-primary-fg">
+        <h2 className="text-white text-center pt-4">Our Services</h2>
         <SummaryCardArea summaryCards={services} />
       </section>
 
-      <section className="py-6">
+      <section className="">
         {
           featuredProjects.map((fp, index) => {
             return (
@@ -113,7 +114,7 @@ export default function Home() {
           })
         }
       </section>
-      <section className="py-6">
+      <section className="">
         <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
           <div className="flex flex-col gap-10 items-start">
             <h2>Serving Chicago, Cook and Dupage Counties</h2>

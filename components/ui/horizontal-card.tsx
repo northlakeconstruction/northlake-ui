@@ -18,7 +18,7 @@ export function HorizontalCard(props: HorizontalCardProps) {
                     height={500}
                     width={500}
                     alt={alt}
-                    className={`hidden md:block`}
+                    className={`hidden md:block md:max-w-4/10`}
                     />
             )}
             <div className="flex items-center">
@@ -29,7 +29,7 @@ export function HorizontalCard(props: HorizontalCardProps) {
                     height={500}
                     width={500}
                     alt={alt}
-                    className="hidden md:block"
+                    className="hidden md:block md:max-w-4/10"
                 />
             )}
         </div>

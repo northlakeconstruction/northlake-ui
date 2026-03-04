@@ -39,7 +39,7 @@ export default function RootLayout({
         />
       </head>
       <html lang="en">
-        <body className="min-h-screen flex flex-col">
+        <body className="min-h-screen flex flex-col gap-0">
           <Header categories={sitemap}/>
           <main>
             {children}
