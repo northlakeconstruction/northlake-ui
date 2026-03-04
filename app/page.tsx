@@ -2,8 +2,11 @@ import { SummaryCardArea } from "@/components/layout/summaryCardArea";
 import Image from "next/image"
 const services = [
   {
-    title: "Parking Lots",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
+    title: "Asphalt Paving and Repairs",
+    description: `Asphalt remains the industry standard for paving throughout the United States,
+      with more than 90% of parking lots constructed using this durable, cost-effective, and long-
+      lasting material. Its proven reliability and ease of maintenance make it the preferred choice 
+      for commercial and municipal applications.`,
     detailLink: "/services/paving",
     image: {
       src: "/paver.png",
@@ -11,27 +14,54 @@ const services = [
     }
   },
   {
-    title: "Driveways",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
-    detailLink: "/services/paving",
+    title: "Street Restoration",
+    description: `We handle street restoration for utility contractors with full DOT permitting 
+      compliance that includes saw cutting, chipping, sweeping, paving, and thermoplastic 
+      markings to match existing surfaces and meet municipal standards.`,
+    detailLink: "/services/restoration",
     image: {
       src: "/paver.png",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
     }
   },
   {
-    title: "Patching",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
-    detailLink: "/services/paving",
+    title: "Milling",
+    description: `Utilizing precision equipment, we mill existing pavement to specified depths 
+      to create a clean, uniform surface ready for overlay. This process ensures proper grading, 
+      drainage, and long-term performance.`,
+    detailLink: "/services/milling",
     image: {
       src: "/paver.png",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
     }
   },
   {
-    title: "Flat Work",
-    description: "From city streets to stadium parking lots we lay all the asphalt.",
-    detailLink: "/services/paving",
+    title: "Stone Installation and Grading",
+    description: `We install and fine-grade aggregate base to specification, ensuring accurate 
+      elevations, proper drainage, and strong load-bearing support - giving our customers a 
+      reliable base built to minimize future failure.`,
+    detailLink: "/services/stone",
+    image: {
+      src: "/paver.png",
+      alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
+    }
+  },
+  {
+    title: "Demolition and Excavation",
+    description: `We remove existing asphalt, concrete, and unsuitable subgrade materials while 
+      maintaining proper elevations and site integrity. `,
+    detailLink: "/services/demolition",
+    image: {
+      src: "/paver.png",
+      alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
+    }
+  },
+  {
+    title: "Concrete Flat Work",
+    description: `We specialize in sidewalks, curb and gutter, pads, and other site concrete 
+      installations. With a focus on durability, ADA compliance, and proper drainage, we 
+      provide customers with dependable long-term solutions.`,
+    detailLink: "/services/stone",
     image: {
       src: "/paver.png",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."

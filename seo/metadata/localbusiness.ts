@@ -5,13 +5,13 @@ const localbusiness: WithContext<LocalBusiness> = {
     '@type': 'LocalBusiness',
     name: 'Northlake Construction',
     url: 'https://northlake-construction.com',
-    logo: 'https://northlake-construction.com/logo.png',
+    logo: '/header-logo.png',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '1950 West 43rd Street',
+        streetAddress: '3119 N Karlov Ave',
         addressLocality: 'Chicago',
         addressRegion: 'IL',
-        postalCode: '60609',
+        postalCode: '60641',
         addressCountry: 'US'
     }
 

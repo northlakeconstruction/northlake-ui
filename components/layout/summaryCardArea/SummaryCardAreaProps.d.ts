@@ -1,4 +1,4 @@
-interface SummaryCard {
+interface SummaryCardProps {
     title: string
     description: string
     detailLink: string
@@ -9,7 +9,7 @@ interface SummaryCard {
 }
 
 interface SummaryCardAreaProps {
-    summaryCards: SummaryCard[]
+    summaryCards: SummaryCardProps[]
 }
 
-export {SummaryCard, SummaryCardAreaProps}
+export {SummaryCardProps, SummaryCardAreaProps}
