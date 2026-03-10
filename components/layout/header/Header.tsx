@@ -43,10 +43,8 @@ const Header = (props: HeaderProps) => {
                                         <NavigationMenuContent>
                                             {
                                                 c.subCategory?.map(s => (
-                                                    <NavigationMenuLink key={s.name}>
-                                                        <Link href={s.link ?? "/"}>
+                                                    <NavigationMenuLink key={s.name} onClick={() => router.push(s.link ?? "/")}>
                                                         {s.name}
-                                                        </Link>
                                                     </NavigationMenuLink>
                                                 ))
                                             }

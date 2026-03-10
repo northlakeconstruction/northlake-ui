@@ -22,6 +22,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "Northlake Construction",
   description: "Paving Contractor in Chicago",
+  icons: {
+    icon: [{url: '/favicon.ico'}]
+  },
   robots: 'index, follow'
 };
 
@@ -38,7 +41,7 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(localbusiness)}}
         />
       </head>
-      <html lang="en">
+      <html lang="en" className={`${oswald.variable} ${lato.variable}`}>
         <body className="min-h-screen flex flex-col gap-0">
           <Header categories={sitemap}/>
           <main>

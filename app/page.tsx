@@ -20,7 +20,7 @@ const services = [
       markings to match existing surfaces and meet municipal standards.`,
     detailLink: "/services/restoration",
     image: {
-      src: "/paver.png",
+      src: "/street-restoration.jpg",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
     }
   },
@@ -31,7 +31,7 @@ const services = [
       drainage, and long-term performance.`,
     detailLink: "/services/milling",
     image: {
-      src: "/paver.png",
+      src: "/milling.jpg",
       alt: "A Northlake paving crew on a public road witht he Chicago Skyline in the background."
     }
   },

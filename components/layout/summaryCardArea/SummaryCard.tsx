@@ -3,8 +3,6 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ChevronRight } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { SummaryCardProps } from "./SummaryCardAreaProps"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
@@ -15,18 +13,20 @@ export function SummaryCard (props: SummaryCardProps) {
 
     return(
         <div 
-            className="w-full md:basis-3/10 lg:basis-20/100 shrink-0 flex"
+            className="w-full flex w-full md:basis-[30%] xl:basis-[20%] p-4"
         >
             <Card 
-                className="pt-0 overflow-hidden"
+                className="pt-0 w-full overflow-hidden"
+                onMouseEnter={() => {console.log("hover")}}
             >
-                <Image 
-                    src={image.src}
-                    alt={image.alt}
-                    height={250}
-                    width={250}
-                    className="hidden md:block md:w-full md:h-auto"
-                />
+                <div className="hidden md:block md:relative md:aspect-[4/3] md:w-full md:overflow-hidden">
+                    <Image 
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="hidden md:block md:w-full md:h-auto"
+                    />
+                </div>
                 <CardContent>
                     <Accordion 
                         type="single"

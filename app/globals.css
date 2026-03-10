@@ -21,10 +21,9 @@
     @apply scroll-smooth bg-background;
   }
 
-  body {
-    @apply bg-white text-primary-text antialiased;
-    @apply bg-background text-foreground;
-    font-family: "Lato", sans-serif;
+  body, address {
+    @apply antialiased;
+    font-family: var(--font-lato), sans-serif;
   }
 
   
@@ -38,7 +37,7 @@
   }
   
   h1, h2, h3 {
-    font-family: "Oswald", sans-serif;
+    font-family: var(--font-oswald), sans-serif;
   }
 
   a {
