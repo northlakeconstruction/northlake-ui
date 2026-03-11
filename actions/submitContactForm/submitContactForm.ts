@@ -12,8 +12,7 @@ export async function submitContactForm(data: submitContactFormProps) {
         return { success: false }
     }
 
-    // const success = await mailer(data)
-    const success = true
+    const success = await mailer(data)
     return { success }
 }
 
