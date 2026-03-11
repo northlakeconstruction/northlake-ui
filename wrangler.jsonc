@@ -21,5 +21,9 @@
   },
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    "AWS_REGION": "us-east-2", 
+    "NEW_LEAD_TOPIC_ARN": "arn:aws:sns:us-east-2:634250761504:northlake-contact",
   }
 }
