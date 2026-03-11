@@ -5,11 +5,43 @@ import { SignatureV4 } from "@aws-sdk/signature-v4"
 import env from "@/env"
 
 export async function submitContactForm(data: submitContactFormProps) {
-    const success = await mailer(data)
+    console.log(JSON.stringify(data))
+    const validationSuccess = await validateToken(data["cf-turnstile-response"])
+    console.log(validationSuccess)
+    if(!validationSuccess){
+        return { success: false }
+    }
+
+    // const success = await mailer(data)
+    const success = true
     return { success }
 }
 
 const SUBJECT = "New Internet Lead"
+
+const validateToken = async(token: string): Promise<boolean> => {
+    console.log(token)
+    console.log(env.TURNSTILE_VALIDATION_ENDPOINT)
+    const url = new URL(env.TURNSTILE_VALIDATION_ENDPOINT ?? "")
+    const payload = {
+        secret: env.TURNSTILE_SECRET_KEY,
+        response: token,
+    }
+    
+    try{
+        const res = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload)
+        })
+        const result = await res.json()
+        return result.success
+    } catch (_e) {
+        return false
+    }
+}
 
 const mailer = async(messageData: submitContactFormProps): Promise<Boolean> => {
 

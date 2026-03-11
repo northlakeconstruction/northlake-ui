@@ -3,4 +3,5 @@ interface submitContactFormProps {
     email: string
     phone: string
     desc: string
+    "cf-turnstile-response": string
 }

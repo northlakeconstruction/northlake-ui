@@ -6,11 +6,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form } from "@/hooks/Form";
 import { submitContactForm } from "@/actions/submitContactForm";
+import env from "@/env"
+import { useState } from "react";
+import Script from "next/script";
 
 const form_name = "CONTACT_FORM"
 
 export function Contact(){
+    const [token, setToken] = useState<string | null>(null)
 
+    console.log(`Turnstile: ${env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}`)
     const handleSubmit = async(event: any) => {
         event.preventDefault()
         const form = event.target
@@ -49,10 +54,19 @@ export function Contact(){
                             <FieldLabel htmlFor="desc">Tell Us About Your Project</FieldLabel>
                             <Textarea name="desc" placeholder="Tell us about your project" />
                         </Field>
+                        <Script 
+                            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                            async
+                            defer
+                        />
                         <div className="flex justify-end gap-4">
                             <Button variant="secondary" type="reset">Clear</Button>
                             <Button type="submit">Submit</Button>
                         </div>
+                        <div
+                            className="cf-turnstile flex justify-end py-4"
+                            data-sitekey={env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                        ></div>
                     </Form>
                 </div>
             </div>
