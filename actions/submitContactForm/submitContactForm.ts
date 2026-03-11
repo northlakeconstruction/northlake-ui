@@ -13,7 +13,7 @@ export async function submitContactForm(data: submitContactFormProps) {
     }
 
     const success = await mailer(data)
-    return { success }
+    return { success: success }
 }
 
 const SUBJECT = "New Internet Lead"
@@ -42,7 +42,7 @@ const validateToken = async(token: string): Promise<boolean> => {
     }
 }
 
-const mailer = async(messageData: submitContactFormProps): Promise<Boolean> => {
+const mailer = async(messageData: submitContactFormProps): Promise<boolean> => {
 
     const message = [
     `You've a received a new lead from the website. `,
@@ -51,7 +51,7 @@ const mailer = async(messageData: submitContactFormProps): Promise<Boolean> => {
     `${messageData.desc}`,
     ``,
     `Their return contact info is: `,
-    `tel: ${messageData.phone}`,
+    `tel: ${messageData.tel}`,
     `email: ${messageData.email}`
     ]
 

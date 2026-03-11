@@ -1,7 +1,7 @@
 interface submitContactFormProps {
     name: string   
     email: string
-    phone: string
+    tel: string
     desc: string
     "cf-turnstile-response": string
 }
