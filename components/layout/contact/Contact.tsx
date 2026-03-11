@@ -9,15 +9,21 @@ import { submitContactForm } from "@/actions/submitContactForm";
 import env from "@/env"
 import { useState } from "react";
 import Script from "next/script";
+import { Spinner } from "@/components/ui/spinner";
+import { CircleCheck } from "lucide-react";
 
 const form_name = "CONTACT_FORM"
 
 export function Contact(){
     const [token, setToken] = useState<string | null>(null)
+    const [loading, setLoading] = useState<boolean>(false)
+    const [success, setSuccess] = useState<boolean>(false)
+    const [submissions, setSubmissions] = useState<number>(0)
 
-    console.log(`Turnstile: ${env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}`)
     const handleSubmit = async(event: any) => {
         event.preventDefault()
+        setLoading(true)
+        setSubmissions(x => x + 1)
         const form = event.target
         const fd = new FormData(form)
         let emailRequest: Record<string, any> = {}
@@ -25,9 +31,9 @@ export function Contact(){
             const [k, v] = entry
             emailRequest[k] = v
         }
-        console.log(JSON.stringify(emailRequest))
         const res = await submitContactForm(emailRequest as submitContactFormProps)
-        console.log(res)
+        setLoading(false)
+        setSuccess(res.success)
     }
 
     return (
@@ -59,14 +65,22 @@ export function Contact(){
                             async
                             defer
                         />
-                        <div className="flex justify-end gap-4">
-                            <Button variant="secondary" type="reset">Clear</Button>
-                            <Button type="submit">Submit</Button>
-                        </div>
-                        <div
-                            className="cf-turnstile flex justify-end py-4"
-                            data-sitekey={env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                        ></div>
+                            <div className="flex justify-end gap-4">
+                                <Button disabled={loading || success} variant="secondary" type="reset">Clear</Button>
+                                <Button disabled={loading || success} type="submit">
+                                    {loading && (<Spinner data-icon="inline-start"/>)}
+                                    {success && (<><CircleCheck />Submitted</>)}
+                                    {!success && "Submit"}
+                                </Button>
+                            </div>
+                            <div className="flex justify-end py-4">
+                                {submissions > 0 && !success && (<p>Submission failed. Try again or email rbyrdsong@northlake-construction.com</p>)}
+                                {success && (<p>Thanks! We'll get back to you shortly.</p>)}
+                            </div>
+                            <div
+                                className="cf-turnstile flex justify-end py-4"
+                                data-sitekey={env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                            ></div>
                     </Form>
                 </div>
             </div>
