@@ -38,7 +38,6 @@ export function Contact(){
     return (
         <div className="flex-col bg-white p-4">
                 <div className="mx-auto max-w-90/100 md:max-w-75/100 lg:max-w-50/100">
-                    <h2 className="py-4 text-center">Contact Northlake Construction</h2>
                     <Form
                         formId={form_name}
                         onSubmit={handleSubmit}
