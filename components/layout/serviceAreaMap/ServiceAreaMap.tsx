@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
 
 const GEO_URL = "/illinois-counties.json"
@@ -25,6 +26,11 @@ const CHICAGO_STAR_PATH = "M0,-12 L2.2,-3.8 L10.4,-6 L4.4,0 L10.4,6 L2.2,3.8 L0,
 const CHICAGO_RED = "#E4002B" // exact red from the flag SVG
 
 export function ServiceAreaMap() {
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => { setMounted(true) }, [])
+
+    if (!mounted) return <div className="w-full aspect-square" />
+
     return (
         <ComposableMap
             projection="geoMercator"
