@@ -8,7 +8,7 @@ function Form({formId, onSubmit: handleSubmit, children}: FormProps) {
     useEffect(() => {
         const form = document.querySelector(`#${formId}`) as HTMLFormElement
         form.addEventListener("submit", handleSubmit)
-        // return () => { form.removeEventListener("submit", handleSubmit) }
+        return () => { form.removeEventListener("submit", handleSubmit) }
     }, [])
 
     return (

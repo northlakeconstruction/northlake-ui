@@ -64,8 +64,8 @@ export function Contact(){
                             defer
                         />
                             <div className="flex justify-end gap-4">
-                                <Button disabled={loading || success} variant="secondary" type="reset">Clear</Button>
-                                <Button disabled={loading || success} type="submit">
+                                <Button disabled={loading || success} variant="secondary" type="reset" tabIndex={0}>Clear</Button>
+                                <Button disabled={loading || success} type="submit" tabIndex={0}>
                                     {loading && (<Spinner data-icon="inline-start"/>)}
                                     {success && (<><CircleCheck />Submitted</>)}
                                     {!success && "Submit"}
