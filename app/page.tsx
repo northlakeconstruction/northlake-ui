@@ -120,6 +120,9 @@ export default function Home() {
       </div>
       {/* Services */}
       <section className="bg-section">
+        <div className="flex justify-start py-6">
+          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Our Services</h2>
+        </div>
         <SummaryCardArea summaryCards={services} />
       </section>
 
@@ -135,22 +138,32 @@ export default function Home() {
         }
       </section> */}
 
-      <section className="">
-        <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
-          <div className="flex flex-col gap-10 items-start">
-            <h2>Serving Chicago, Cook and Dupage Counties</h2>
-            <ul className="text-black text-3xl">
-              <li>Chicago</li>
-              <li>Naperville</li>
-              <li>Tinley Park</li>
-              <li>Northbrook</li>
-            </ul>
-          </div>
-        </Hero>
+      <section className="bg-section">
+        <div className="flex justify-start py-6">
+          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Service Areas</h2>
+        </div>
       </section>
+      <div className="relative">
+        <section>
+          <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
+            <div className="flex flex-col gap-10 items-start">
+              <h2>Serving Chicago, Cook and Dupage Counties</h2>
+              <ul className="text-black text-3xl">
+                <li>Chicago</li>
+                <li>Naperville</li>
+                <li>Tinley Park</li>
+                <li>Northbrook</li>
+              </ul>
+            </div>
+          </Hero>
+        </section>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-section-alt pointer-events-none" />
+      </div>
       {/* About */}
       <section className="bg-section-alt p-4">
-        <h2 className="text-white text-center p-4">About Us</h2>
+        <div className="flex justify-start py-6">
+          <h2 className="text-md pl-6 uppercase tracking-widest text-white/50">About Us</h2>
+        </div>
         <div className="flex p-6 items-center gap-6 bg-white m-4">
           <Image 
             src="/ricky-portrait.png"
@@ -179,7 +192,10 @@ export default function Home() {
         </div>
         {/* Contact */}
       </section>
-      <section>
+      <section className="bg-section">
+        <div className="flex justify-start py-6">
+          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Contact Us</h2>
+        </div>
         <Contact />
       </section>
     </main>
