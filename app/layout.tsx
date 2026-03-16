@@ -25,7 +25,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [{url: '/favicon.ico'}]
   },
-  robots: 'index, follow'
+  robots: 'index, follow',
+  openGraph: {
+    images: [{
+      url: '/header-logo-blue.png',
+      width: 2072,
+      height: 634,
+      alt: 'Northlake Construction',
+    }],
+  },
 };
 
 export default function RootLayout({
