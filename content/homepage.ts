@@ -22,3 +22,17 @@ export const serviceAreaSection = {
     "Schaumburg",
   ],
 }
+
+export const territoryPage = {
+  /**
+   * Introductory paragraph shown at the top of the Where We Work page.
+   * Describe the region you serve and any relevant context.
+   */
+  intro: `We proudly travel to locations in Chicagoland, especially City of Chicago, Cook and DuPage counties.`,
+
+  /**
+   * Shown below the city list — use this to note any areas
+   * not explicitly listed, or to invite inquiries from other locations.
+   */
+  footnote: `And your community.`,
+}

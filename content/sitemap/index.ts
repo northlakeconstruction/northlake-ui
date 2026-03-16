@@ -32,7 +32,7 @@ export const sitemap = [
     subCategory: [
       {
         name: "Our Founder",
-        link: "/about/team/ricky",
+        link: "/about/founder",
       },
       {
         name: "Our Certifications",
