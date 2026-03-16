@@ -20,7 +20,7 @@ export function SummaryCard({ title, image, description, detailLink }: SummaryCa
                     <p className="text-white text-xl font-[oswald] uppercase tracking-wide">{title}</p>
                 </div>
                 {/* Hover overlay — desktop only */}
-                <div className="hidden md:flex absolute inset-0 bg-primary-fg/90 flex-col justify-center items-center p-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="hidden md:flex absolute inset-0 bg-section-alt/90 flex-col justify-center items-center p-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white text-xl font-[oswald] uppercase tracking-wide">{title}</p>
                     <p className="text-white text-sm leading-relaxed text-center">{description}</p>
                     <span className="text-white border border-white px-4 py-2 text-sm font-[oswald] uppercase tracking-wider">
@@ -29,7 +29,7 @@ export function SummaryCard({ title, image, description, detailLink }: SummaryCa
                 </div>
             </Link>
             {/* Description — mobile only */}
-            <div className="md:hidden bg-primary-fg p-4 flex flex-col gap-3">
+            <div className="md:hidden bg-section-alt p-4 flex flex-col gap-3">
                 <p className="text-white text-sm leading-relaxed">{description}</p>
                 <Link href={detailLink} className="text-white border border-white px-4 py-2 text-sm font-[oswald] uppercase tracking-wider text-center no-underline hover:no-underline">
                     Learn More

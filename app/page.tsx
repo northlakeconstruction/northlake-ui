@@ -103,21 +103,23 @@ export default function Home() {
 
   return (
     <main>
-      <section className="">
-        <Hero 
-          img="/paver.png" 
-          alt="A paving crew in front of the Chicago skyline."
-        >
-          <div className="flex flex-col gap-10 items-start max-w-md">
-            <h1 className="text-4xl md:text-5xl max-w-2xl">Northlake Construction</h1>
-            <h2 className="text-2xl md:text-3xl">A Chicago-based asphalt paving and sitework contractor.</h2>
-            <Button onClick={() => {router.push("/contact")}}>Get a Quote!</Button>
-          </div>
-        </Hero>
-      </section>
+      <div className="relative">
+        <section>
+          <Hero
+            img="/paver.png"
+            alt="A paving crew in front of the Chicago skyline."
+          >
+            <div className="flex flex-col gap-10 items-start max-w-md">
+              <h1 className="text-4xl md:text-5xl max-w-2xl">Northlake Construction</h1>
+              <h2 className="text-2xl md:text-3xl">A Chicago-based asphalt paving and sitework contractor.</h2>
+              <Button onClick={() => {router.push("/contact")}}>Get a Quote!</Button>
+            </div>
+          </Hero>
+        </section>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-section pointer-events-none" />
+      </div>
       {/* Services */}
-      <section className="bg-primary-fg">
-        <h2 className="text-white text-center pt-4">Our Services</h2>
+      <section className="bg-section">
         <SummaryCardArea summaryCards={services} />
       </section>
 
@@ -147,7 +149,7 @@ export default function Home() {
         </Hero>
       </section>
       {/* About */}
-      <section className="bg-primary-fg p-4">
+      <section className="bg-section-alt p-4">
         <h2 className="text-white text-center p-4">About Us</h2>
         <div className="flex p-6 items-center gap-6 bg-white m-4">
           <Image 
