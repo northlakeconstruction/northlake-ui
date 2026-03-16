@@ -96,6 +96,7 @@ import { Button } from "@/components/ui/button";
 import { HorizontalCard } from "@/components/ui/horizontal-card";
 import { Testimonial } from "@/components/ui/testimonial";
 import { Contact } from "@/components/layout/contact";
+import { ServiceAreaMap } from "@/components/layout/serviceAreaMap/ServiceAreaMap";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -142,23 +143,23 @@ export default function Home() {
         <div className="flex justify-start py-6">
           <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Service Areas</h2>
         </div>
+        <div className="flex flex-col md:flex-row items-center gap-8 px-6 pb-12">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <ServiceAreaMap />
+          </div>
+          <div className="sr-only md:not-sr-only md:w-1/2 flex flex-col gap-6">
+            <h2 className="text-3xl">Serving Chicago,<br />Cook &amp; DuPage Counties</h2>
+            <ul className="flex flex-col gap-2 text-xl font-[oswald] uppercase tracking-wide text-primary-fg">
+              <li>Chicago</li>
+              <li>Naperville</li>
+              <li>Tinley Park</li>
+              <li>Northbrook</li>
+              <li>Schaumburg</li>
+              <li>Wheaton</li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <div className="relative">
-        <section>
-          <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
-            <div className="flex flex-col gap-10 items-start">
-              <h2>Serving Chicago, Cook and Dupage Counties</h2>
-              <ul className="text-black text-3xl">
-                <li>Chicago</li>
-                <li>Naperville</li>
-                <li>Tinley Park</li>
-                <li>Northbrook</li>
-              </ul>
-            </div>
-          </Hero>
-        </section>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-section-alt pointer-events-none" />
-      </div>
       {/* About */}
       <section className="bg-section-alt p-4">
         <div className="flex justify-start py-6">
