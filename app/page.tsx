@@ -95,7 +95,6 @@ import { Hero } from "@/components/layout/hero/Hero";
 import { Button } from "@/components/ui/button";
 import { HorizontalCard } from "@/components/ui/horizontal-card";
 import { Testimonial } from "@/components/ui/testimonial";
-import { Contact } from "@/components/layout/contact";
 import { ServiceAreaMap } from "@/components/layout/serviceAreaMap/ServiceAreaMap";
 import { useRouter } from "next/navigation";
 
@@ -191,12 +190,6 @@ export default function Home() {
           </div>
         </div>
         {/* Contact */}
-      </section>
-      <section className="bg-section">
-        <div className="flex justify-start py-6">
-          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Contact Us</h2>
-        </div>
-        <Contact />
       </section>
     </main>
   );

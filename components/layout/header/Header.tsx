@@ -68,12 +68,12 @@ const Header = (props: HeaderProps) => {
                             <nav className="flex flex-col gap-4 mt-8">
                                 <Link href="/about" className="text-xl font-[oswald]">About</Link>
                                 <Link href="/services" className="text-xl font-[oswald]">Services</Link>
-                                <Link href="/contact" className="text-xl font-[oswald]">Contact</Link>
+                                <Link href="#contact" className="text-xl font-[oswald]">Contact</Link>
                             </nav>
                             </SheetContent>
                         </Sheet>
                     </div>
-                    <Button onClick={() => router.push("/contact")}>Contact</Button>
+                    <Button asChild><Link href="#contact">Contact</Link></Button>
                 </nav>
             </div>
         </header>
