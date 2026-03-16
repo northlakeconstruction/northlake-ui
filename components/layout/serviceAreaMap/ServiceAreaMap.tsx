@@ -17,6 +17,12 @@ const serviceMarkers: { name: string; coordinates: [number, number]; chicago?: b
     { name: "Northbrook",   coordinates: [-87.8287, 42.1253] },
     { name: "Schaumburg",   coordinates: [-88.0834, 42.0334] },
     { name: "Wheaton",      coordinates: [-88.1070, 41.8661] },
+    { name: "Oak Park",     coordinates: [-87.7845, 41.8850] },
+    { name: "Des Plaines",  coordinates: [-87.8834, 42.0334] },
+    { name: "Skokie",       coordinates: [-87.7335, 42.0336] },
+    { name: "Palos Hills",      coordinates: [-87.8278, 41.6997] },
+    { name: "Blue Island",      coordinates: [-87.6784, 41.6578] },
+    { name: "Chicago Heights",  coordinates: [-87.6356, 41.5061] },
 ]
 
 // Exact star from the Chicago flag SVG (commons.wikimedia.org), centered at origin and scaled to marker size

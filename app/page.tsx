@@ -155,7 +155,6 @@ export default function Home() {
               <li>Tinley Park</li>
               <li>Northbrook</li>
               <li>Schaumburg</li>
-              <li>Wheaton</li>
             </ul>
           </div>
         </div>
