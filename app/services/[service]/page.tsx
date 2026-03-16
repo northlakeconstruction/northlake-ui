@@ -1,47 +1,43 @@
 import { notFound } from "next/navigation"
 import type { ServicePageProps } from "../service"
-import Services from "@/content/services"
+import { services } from "@/content/services"
 import serviceld from "@/seo/metadata/service"
+import { ServiceDetail } from "@/components/layout/serviceDetail/ServiceDetail"
 
 export async function generateMetadata({ params }: ServicePageProps) {
+  const { service } = await params
+  const pageContent = services.find(s => s.slug === service)
 
-    const { service } = await params
-    
-    const pageContent = Services[service]
-    if(!pageContent){
-        notFound()
+  if (!pageContent) notFound()
+
+  const { title, summary, detail } = pageContent
+
+  return {
+    title,
+    openGraph: {
+      title,
+      description: summary,
+      image: detail.hero.src,
     }
-    
-    const { title, description, linkImg } = pageContent
-
-
-    return {
-        title,
-        openGraph: {
-            title,
-            description,
-            image: linkImg
-        }
-    }
+  }
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-    const { service } = await params
-    
-    const pageContent = Services[service]
-    if(!pageContent){
-        notFound()
-    }
-    const {description, serviceType, Page} = pageContent
-    serviceld.serviceType = serviceType
-    serviceld.description = description
-    return (
+  const { service } = await params
+  const pageContent = services.find(s => s.slug === service)
+
+  if (!pageContent) notFound()
+
+  serviceld.serviceType = pageContent.serviceType
+  serviceld.description = pageContent.summary
+
+  return (
     <>
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: JSON.stringify(serviceld)}}
-        />
-        <Page />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceld) }}
+      />
+      <ServiceDetail service={pageContent} />
     </>
-    )
+  )
 }
