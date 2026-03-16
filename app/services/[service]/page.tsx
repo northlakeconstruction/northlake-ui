@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import type { ServicePageProps } from "../service"
 import { services } from "@/content/services"
-import serviceld from "@/seo/metadata/service"
+import { buildServiceSchema } from "@/seo/metadata/service"
 import { ServiceDetail } from "@/components/layout/serviceDetail/ServiceDetail"
 
 export async function generateMetadata({ params }: ServicePageProps) {
@@ -28,14 +28,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   if (!pageContent) notFound()
 
-  serviceld.serviceType = pageContent.serviceType
-  serviceld.description = pageContent.summary
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceld) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildServiceSchema(pageContent)) }}
       />
       <ServiceDetail service={pageContent} />
     </>
