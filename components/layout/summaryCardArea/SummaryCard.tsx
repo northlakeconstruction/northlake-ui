@@ -1,66 +1,40 @@
 "use client"
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { SummaryCardProps } from "./SummaryCardAreaProps"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
-export function SummaryCard (props: SummaryCardProps) {
-    const {title, image, description, detailLink} = props
-    const router = useRouter()
-
-    return(
-        <div 
-            className="w-full flex w-full md:basis-[30%] xl:basis-[20%] p-4"
-        >
-            <Card 
-                className="pt-0 w-full overflow-hidden"
-                onMouseEnter={() => {console.log("hover")}}
-            >
-                <div className="hidden md:block md:relative md:aspect-[4/3] md:w-full md:overflow-hidden">
-                    <Image 
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="hidden md:block md:w-full md:h-auto"
-                    />
+export function SummaryCard({ title, image, description, detailLink }: SummaryCardProps) {
+    return (
+        <div className="group flex flex-col">
+            <Link href={detailLink} className="relative aspect-[16/9] md:aspect-[4/3] overflow-hidden block">
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Always-on gradient + title */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="text-white text-xl font-[oswald] uppercase tracking-wide">{title}</p>
                 </div>
-                <CardContent>
-                    <Accordion 
-                        type="single"
-                        collapsible
-                    >
-                        <AccordionItem value={title}>
-                            <AccordionTrigger className="text-xl">
-                                {title}
-                            </AccordionTrigger>
-                            <AccordionContent>
-                                {description}
-                            </AccordionContent>
-                        </AccordionItem>
-                    </Accordion>
-                    {/* <Collapsible>
-                        <CollapsibleTrigger asChild>
-                            <Button
-                                variant="ghost"
-                                className="group [&[data-state=open]>svg]:rotate-90"
-                            >
-                                <ChevronRight className="transition-transform duration-200" />
-                            </Button>
-                        </CollapsibleTrigger>
-
-                        <CollapsibleContent>
-                            {description}
-                        </CollapsibleContent>
-                    </Collapsible> */}
-                    {/* <p>{s.description}</p> */}
-                </CardContent>
-                <CardFooter>
-                    <Button onClick={() => {router.push(detailLink)}}>Learn More</Button>
-                </CardFooter>
-            </Card>
+                {/* Hover overlay — desktop only */}
+                <div className="hidden md:flex absolute inset-0 bg-primary-fg/90 flex-col justify-center items-center p-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white text-xl font-[oswald] uppercase tracking-wide">{title}</p>
+                    <p className="text-white text-sm leading-relaxed text-center">{description}</p>
+                    <span className="text-white border border-white px-4 py-2 text-sm font-[oswald] uppercase tracking-wider">
+                        Learn More
+                    </span>
+                </div>
+            </Link>
+            {/* Description — mobile only */}
+            <div className="md:hidden bg-primary-fg p-4 flex flex-col gap-3">
+                <p className="text-white text-sm leading-relaxed">{description}</p>
+                <Link href={detailLink} className="text-white border border-white px-4 py-2 text-sm font-[oswald] uppercase tracking-wider text-center no-underline hover:no-underline">
+                    Learn More
+                </Link>
+            </div>
         </div>
-        )
-    }
+    )
+}
