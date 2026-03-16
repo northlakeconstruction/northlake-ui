@@ -34,19 +34,19 @@ const Header = (props: HeaderProps) => {
                     </div>
                 </Link>
                 <nav className="flex items-center gap-6">
-                    <NavigationMenu className="hidden md:flex gap-6">
+                    <NavigationMenu viewport={false} className="hidden md:flex gap-6">
                         <NavigationMenuList>
                             {
                                 categories.map(c => (
                                     <NavigationMenuItem key={c.name}>
-                                        <NavigationMenuTrigger>
-                                            <h3 className="text-xl">{c.name}</h3>
+                                        <NavigationMenuTrigger className="text-xl font-[oswald]">
+                                            {c.name}
                                         </NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             {
                                                 c.subCategory?.map(s => (
                                                     <NavigationMenuLink key={s.name} onClick={() => router.push(s.link ?? "/")}>
-                                                        <h3 className="text-xl">{s.name}</h3>
+                                                        <span className="text-xl font-[oswald]">{s.name}</span>
                                                     </NavigationMenuLink>
                                                 ))
                                             }
@@ -66,9 +66,9 @@ const Header = (props: HeaderProps) => {
 
                             <SheetContent side="right">
                             <nav className="flex flex-col gap-4 mt-8">
-                                <Link href="/about">About</Link>
-                                <Link href="/services">Services</Link>
-                                <Link href="/contact">Contact</Link>
+                                <Link href="/about" className="text-xl font-[oswald]">About</Link>
+                                <Link href="/services" className="text-xl font-[oswald]">Services</Link>
+                                <Link href="/contact" className="text-xl font-[oswald]">Contact</Link>
                             </nav>
                             </SheetContent>
                         </Sheet>
