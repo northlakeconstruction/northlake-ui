@@ -1,3 +1,4 @@
+"use client"
 import { SummaryCardArea } from "@/components/layout/summaryCardArea";
 import Image from "next/image"
 const services = [
@@ -95,8 +96,11 @@ import { Button } from "@/components/ui/button";
 import { HorizontalCard } from "@/components/ui/horizontal-card";
 import { Testimonial } from "@/components/ui/testimonial";
 import { Contact } from "@/components/layout/contact";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <main>
       <section className="">
@@ -107,34 +111,17 @@ export default function Home() {
           <div className="flex flex-col gap-10 items-start max-w-md">
             <h1 className="text-4xl md:text-5xl max-w-2xl">Northlake Construction</h1>
             <h2 className="text-2xl md:text-3xl">A Chicago-based asphalt paving and sitework contractor.</h2>
-            <Button>Get a Quote!</Button>
+            <Button onClick={() => {router.push("/contact")}}>Get a Quote!</Button>
           </div>
         </Hero>
       </section>
-      {/* <div className="mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 mt-4">
-        <h1 className="text-center lg:text-right justify-items-end w-150">
-          A Minority Business Enterprise
-        </h1>
-        
-        <Image
-          width={596}
-          height={598}
-          alt="A compactor paves a road with the city skyline in the background."
-          src="/log-transparent.png"
-          className="shrink-0 w-auto max-w-[300px] h-auto block"
-        />
-      
-        <h1 className="text-center lg:text-left justify-items-start w-150">
-          Paving The Future of Chicago
-        </h1>
-      </div> */}
       {/* Services */}
       <section className="bg-primary-fg">
         <h2 className="text-white text-center pt-4">Our Services</h2>
         <SummaryCardArea summaryCards={services} />
       </section>
 
-      <section className="">
+      {/* <section className="">
         {
           featuredProjects.map((fp, index) => {
             return (
@@ -144,7 +131,8 @@ export default function Home() {
             )
           })
         }
-      </section>
+      </section> */}
+
       <section className="">
         <Hero img="/servicearea.png" alt="Map of the City of Chicago and Cook County">
           <div className="flex flex-col gap-10 items-start">

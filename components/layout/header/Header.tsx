@@ -23,13 +23,15 @@ const Header = (props: HeaderProps) => {
         <header className="sticky top-0 w-full p-4 text-primary-fg bg-background z-50">
             <div className="flex justify-between">
                 <Link href={"/"}>
-                    <Image
-                        src="/header-logo.png"
-                        alt="Northlake Construction corporate logo"
-                        height="75"
-                        width="210"
-                    />
-                    <p><i className="text-black">A Minority Business Enterprise</i></p>
+                    <div className="flex flex-col items-center">
+                        <Image
+                            src="/header-logo-blue.png"
+                            alt="Northlake Construction corporate logo"
+                            height="75"
+                            width="210"
+                        />
+                        <p className="text-primary-fg font-[oswald]">A Minority Business Enterprise</p>
+                    </div>
                 </Link>
                 <nav className="flex items-center gap-6">
                     <NavigationMenu className="hidden md:flex gap-6">
@@ -38,13 +40,13 @@ const Header = (props: HeaderProps) => {
                                 categories.map(c => (
                                     <NavigationMenuItem key={c.name}>
                                         <NavigationMenuTrigger>
-                                            {c.name}
+                                            <h3 className="text-xl">{c.name}</h3>
                                         </NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             {
                                                 c.subCategory?.map(s => (
                                                     <NavigationMenuLink key={s.name} onClick={() => router.push(s.link ?? "/")}>
-                                                        {s.name}
+                                                        <h3 className="text-xl">{s.name}</h3>
                                                     </NavigationMenuLink>
                                                 ))
                                             }

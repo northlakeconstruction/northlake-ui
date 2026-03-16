@@ -44,7 +44,7 @@ export default function RootLayout({
       <html lang="en" className={`${oswald.variable} ${lato.variable}`}>
         <body className="min-h-screen flex flex-col gap-0">
           <Header categories={sitemap}/>
-          <main>
+          <main className="flex-1">
             {children}
           </main>
           <Footer />

@@ -77,7 +77,9 @@
   .btn {
     @apply inline-flex items-center justify-center
            rounded-md px-4 py-2 text-sm font-medium
-           transition-colors disabled:opacity-50
+           transition-colors cursor-pointer 
+           disabled:opacity-50
+           disabled:cursor-not-allowed
            disabled:pointer-events-none;
   }
 
@@ -143,7 +145,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #ededed;
+  --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);

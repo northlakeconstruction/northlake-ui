@@ -15,7 +15,6 @@ import { CircleCheck } from "lucide-react";
 const form_name = "CONTACT_FORM"
 
 export function Contact(){
-    const [token, setToken] = useState<string | null>(null)
     const [loading, setLoading] = useState<boolean>(false)
     const [success, setSuccess] = useState<boolean>(false)
     const [submissions, setSubmissions] = useState<number>(0)

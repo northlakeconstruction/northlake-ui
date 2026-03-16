@@ -4,44 +4,42 @@ import Image from 'next/image'
 const Footer = () => {
 
     return (
-        <footer className="w-full p-4 bg-primary-fg text-white">
+        <footer className="w-full pt-8 pb-12 px-6">
             <div className="flex flex-col align-between gap-4 md:flex-row justify-between items-center">
-                <Image
-                    src="/header-logo.png"
-                    alt="Northlake Construction corporate logo"
-                    height="75"
-                    width="210"
-                />
-                <div className="text-center md:flex-col gap-4 text-left">
-                    <div className="flex flex-row gap-2">
-                        <MapPin />
+                 
+                <div className="text-center md:flex-col gap-6 text-left">
+                    <div className="flex flex-row gap-2 items-center">
+                        <MapPin className="w-[1em] h-[1em] align-middle"/>
                         <address className="not-italic textxs: text-center md:text-left">
                             3119 N Karlov Ave.
                             Chicago, IL 60641
                         </address>
                     </div>
-                    <div className="flex text-nowrap flex-row gap-2">
-                        <Mail />
+                    <div className="flex text-nowrap flex-row gap-2 items-center">
+                        <Mail className="w-[1em] h-[1em] align-middle"/>
                         <a 
-                            className="text-white text-center md:text-right"
+                            className="text-black text-center md:text-right"
                             href="mailto:rbyrdsong@northlake-construction.com">
                             rbyrdsong@northlake-construction.com
                         </a>
                     </div>
-                    <div className="flex flex-row gap-2">
-                        <Phone />
+                    <div className="flex flex-row gap-2 items-center">
+                        <Phone className="w-[1em] h-[1em] align-middle"/>
                         <address className="not-italic">
-                            <a className="text-white" href="tel:773-355-6374">(773)355-6374</a>
+                            <a className="text-black" href="tel:773-355-6374">(773)355-6374</a>
                         </address>
                     </div>
                 </div>
                 
                 <div className="flex-col gap-2 text-center content-end">
-                    <div className="flex flex-row gap-2 text-nowrap">
-                        <Copyright />
-                        <p>2026 Northlake Construction</p>
-                    </div>
-                </div> 
+                    <Image
+                        src="/header-logo-blue.png"
+                        alt="Northlake Construction corporate logo"
+                        height="75"
+                        width="210"
+                    />
+                    
+                </div>
             </div>
         </footer>
     )
