@@ -23,13 +23,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/paving",
     card: {
       image: {
-        src: "/paver.png",
+        src: "/paverrear.jpg",
         alt: "A Northlake paving crew on a public road with the Chicago skyline in the background.",
       },
     },
     detail: {
       hero: {
-        src: "/paver.png",
+        src: "/paverrear.jpg",
         alt: "A Northlake paving crew on a public road with the Chicago skyline in the background.",
       },
       sections: [
@@ -129,13 +129,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/stone",
     card: {
       image: {
-        src: "/paver.png",
+        src: "/stonegrading.jpg",
         alt: "Aggregate base being graded and compacted at a job site.",
       },
     },
     detail: {
       hero: {
-        src: "/paver.png",
+        src: "/stonegrading.jpg",
         alt: "Aggregate base being graded and compacted at a job site.",
       },
       sections: [
@@ -164,13 +164,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/demolition",
     card: {
       image: {
-        src: "/paver.png",
+        src: "/demolition.jpg",
         alt: "Excavation equipment breaking up an old concrete surface.",
       },
     },
     detail: {
       hero: {
-        src: "/paver.png",
+        src: "/demolition.jpg",
         alt: "Excavation equipment breaking up an old concrete surface.",
       },
       sections: [
@@ -198,13 +198,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/concrete",
     card: {
       image: {
-        src: "/paver.png",
+        src: "/driveway.jpg",
         alt: "Freshly poured concrete sidewalk with clean edging.",
       },
     },
     detail: {
       hero: {
-        src: "/paver.png",
+        src: "/driveway.jpg",
         alt: "Freshly poured concrete sidewalk with clean edging.",
       },
       sections: [

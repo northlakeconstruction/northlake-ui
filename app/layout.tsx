@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oswald, Lato } from "next/font/google";
 import localbusiness from "@/seo/metadata/localbusiness";
 import { Header } from "@/components/layout/header"
+import { ScrollReset } from "@/components/ScrollReset"
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { sitemap } from "@/content/sitemap";
@@ -51,6 +52,7 @@ export default function RootLayout({
       </head>
       <html lang="en" className={`${oswald.variable} ${lato.variable}`}>
         <body className="min-h-screen flex flex-col gap-0">
+          <ScrollReset />
           <Header categories={sitemap}/>
           <main className="flex-1">
             {children}

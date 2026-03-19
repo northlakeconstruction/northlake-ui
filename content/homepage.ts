@@ -5,7 +5,7 @@ export const hero = {
   heading: "Northlake Construction",
   subheading: "A Chicago-based asphalt paving and sitework contractor.",
   image: {
-    src: "/paver.png",
+    src: "/lpaving.jpg",
     alt: "A paving crew in front of the Chicago skyline.",
   },
   ctaLabel: "Get a Quote!",

@@ -12,13 +12,11 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { company } from '@/content/company'
 
 const Header = (props: HeaderProps) => {
     const { categories } = props
-    const router = useRouter()
 
     return (
         <header className="sticky top-0 w-full p-4 text-primary-fg bg-background z-50">
@@ -45,8 +43,10 @@ const Header = (props: HeaderProps) => {
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         {c.subCategory?.map(s => (
-                                            <NavigationMenuLink key={s.name} onClick={() => router.push(s.link ?? "/")}>
-                                                <span className="text-xl font-[oswald] whitespace-nowrap text-primary-fg">{s.name}</span>
+                                            <NavigationMenuLink key={s.name} asChild>
+                                                <Link href={s.link ?? "/"}>
+                                                    <span className="text-xl font-[oswald] whitespace-nowrap text-primary-fg">{s.name}</span>
+                                                </Link>
                                             </NavigationMenuLink>
                                         ))}
                                     </NavigationMenuContent>
