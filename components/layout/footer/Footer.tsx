@@ -44,6 +44,10 @@ const Footer = () => {
               width="210"
             />
           </div>
+          <div className="flex flex-col text-right">
+            <span>NACS Codes 237310, 238990</span>
+            <span>MBE Certified Contractor</span>
+          </div>
         </div>
       </div>
     </footer>

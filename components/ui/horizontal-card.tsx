@@ -10,28 +10,19 @@ export interface HorizontalCardProps extends PropsWithChildren {
 export function HorizontalCard(props: HorizontalCardProps) {
     const {imageLeft, image, alt, children} = props
 
-    const color = imageLeft ? "bg-card" : "bg-accent"
+    const imageCol = (
+        <div className="hidden md:block relative md:h-auto md:w-[44%] shrink-0 overflow-hidden">
+            <Image src={image} alt={alt} fill className="object-cover" />
+        </div>
+    )
+
     return (
-        <div className={`flex flex-col gap-4 p-4 md:flex-row justify-between ${color}`}>
-            {   !imageLeft && (<Image
-                    src={image}
-                    height={500}
-                    width={500}
-                    alt={alt}
-                    className={`hidden md:block md:max-w-4/10`}
-                    />
-            )}
-            <div className="flex items-center">
+        <div className={`flex flex-col md:flex-row md:h-96`}>
+            {!imageLeft && imageCol}
+            <div className="flex-1 flex items-center p-6">
                 {children}
             </div>
-            {   imageLeft && (<Image
-                    src={image}
-                    height={500}
-                    width={500}
-                    alt={alt}
-                    className="hidden md:block md:max-w-4/10"
-                />
-            )} 
+            {imageLeft && imageCol}
         </div>
     )
 }

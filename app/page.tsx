@@ -2,11 +2,12 @@
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { SummaryCardArea } from "@/components/layout/summaryCardArea"
+import { ProjectTypeArea } from "@/components/layout/projectTypeArea/ProjectTypeArea"
 import { Hero } from "@/components/layout/hero/Hero"
 import { Button } from "@/components/ui/button"
 import { ServiceAreaMap } from "@/components/layout/serviceAreaMap/ServiceAreaMap"
 import { services } from "@/content/services"
-import { hero, serviceAreaSection } from "@/content/homepage"
+import { hero, serviceAreaSection, projectTypes } from "@/content/homepage"
 import { about } from "@/content/about"
 
 const summaryCards = services.map(s => ({
@@ -42,10 +43,18 @@ export default function Home() {
         <SummaryCardArea summaryCards={summaryCards} />
       </section>
 
+      {/* Project Types */}
+      <section className="bg-section">
+        <div className="flex justify-start py-6">
+          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Who We Serve</h2>
+        </div>
+        <ProjectTypeArea projectTypes={projectTypes} />
+      </section>
+
       {/* Service Areas */}
       <section className="bg-section">
         <div className="flex justify-start py-6">
-          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Service Areas</h2>
+          <h2 className="text-md pl-6 uppercase tracking-widest text-primary-fg/50">Our Territory</h2>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-8 px-6 pb-12">
           <div className="w-full md:w-1/2 flex justify-center">

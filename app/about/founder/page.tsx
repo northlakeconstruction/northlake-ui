@@ -30,7 +30,7 @@ export default function FounderPage() {
       <div className="flex flex-col gap-6">
         <h2 className="text-md uppercase tracking-widest text-primary-fg/50">Founder's Message</h2>
         {founder.message.map((paragraph, i) => (
-          <p key={i} className="text-lg leading-relaxed indent-8" dangerouslySetInnerHTML={{ __html: paragraph }} />
+          <p key={i} className="text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
         <div className="mt-4">
           <p className="font-bold text-lg">{founder.name}</p>
