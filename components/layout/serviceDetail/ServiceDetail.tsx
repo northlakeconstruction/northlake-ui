@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { Service } from "@/content/services/service"
+import { services } from "@/content/services"
+import { SummaryCardArea } from "@/components/layout/summaryCardArea"
 
 interface ServiceDetailProps {
   service: Service
@@ -54,6 +56,19 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
           </div>
         </div>
       )}
+
+      {/* Other Services */}
+      <div className="bg-section py-12">
+        <h2 className="text-md uppercase tracking-widest text-primary-fg/50 mb-6 px-6">
+          Our Other Services
+        </h2>
+        <SummaryCardArea summaryCards={services.filter(s => s.slug !== service.slug).map(s => ({
+          title: s.title,
+          description: s.summary,
+          detailLink: `/services/${s.slug}`,
+          image: s.card.image,
+        }))} />
+      </div>
     </article>
   )
 }
