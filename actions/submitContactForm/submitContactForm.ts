@@ -19,8 +19,6 @@ export async function submitContactForm(data: submitContactFormProps) {
 const SUBJECT = "New Internet Lead"
 
 const validateToken = async(token: string): Promise<boolean> => {
-    console.log(token)
-    console.log(env.TURNSTILE_VALIDATION_ENDPOINT)
     const url = new URL(env.TURNSTILE_VALIDATION_ENDPOINT ?? "")
     const payload = {
         secret: env.TURNSTILE_SECRET_KEY,
@@ -37,7 +35,8 @@ const validateToken = async(token: string): Promise<boolean> => {
         })
         const result = await res.json()
         return result.success
-    } catch (_e) {
+    } catch (e) {
+        console.log(JSON.stringify(e))
         return false
     }
 }
