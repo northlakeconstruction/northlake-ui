@@ -24,7 +24,7 @@
   },
   "vars": {
     "AWS_REGION": "us-east-2", 
-    "NEW_LEAD_TOPIC_ARN": "arn:aws:sns:us-east-2:634250761504:northlake-contact",
+    "NEW_LEAD_TOPIC_ARN": "arn:aws:sns:us-east-2:300724398050:northlake-construction",
     "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAACpMWvwPRmL_ZShu",
     "TURNSTILE_VALIDATION_ENDPOINT": "https://challenges.cloudflare.com/turnstile/v0/siteverify"
   }
