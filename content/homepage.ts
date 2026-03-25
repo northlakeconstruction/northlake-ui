@@ -16,10 +16,9 @@ export const serviceAreaSection = {
   /** Cities displayed in the service area list */
   cities: [
     "Chicago",
+    "Evanston",
     "Naperville",
-    "Tinley Park",
-    "Northbrook",
-    "Schaumburg",
+    "Chicago Heights",
   ],
 }
 
@@ -33,8 +32,8 @@ export const serviceAreaSection = {
  */
 export const projectTypes = [
   {
-    title: "Public Right of Way",
-    description: "We are licensed to work in the right-of-way in Chicago and most municipalities in Cook and DuPage counties under NACS codes 237310, 238990.",
+    title: "Municipalities and Governments",
+    description: "We are permitted to work in the public right-of-way in Chicago and various municipalities in Cook County under NAICS codes 237310, 238990.",
     image: {
       src: "/rightofway.jpg",
       alt: "A compactor passes over fresh asphalt on a residential street in Chicago.",
@@ -42,8 +41,8 @@ export const projectTypes = [
     link: undefined,
   },
   {
-    title: "Government, Commercial, and Residential Parking Lots",
-    description: "Full-service paving, milling, and restoration for schools, parks, retail, commercial, and residential properties.",
+    title: "Commercial and Residential",
+    description: "Full-service site work including earthworks, paving, milling, restoration, and flatwork for schools, parks, retail, commercial, and residential properties.",
     image: {
       src: "/parkinglot.jpg",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
@@ -51,14 +50,23 @@ export const projectTypes = [
     link: undefined,
   },
   {
-    title: "Residential",
-    description: "Asphalt and portland cement concrete driveways, sidewalks, drainage, and utility repair for residential customers.",
+    title: "Specialty Paving and Earthwork",
+    description: "We install speciality surfaces and structures such as playgrounds, athletic fields, tracks, and recreational paths",
     image: {
-      src: "/residentialdriveway.jpg",
-      alt: "A freshly paved, blacktop, single-lane driveway.",
+      src: "/parkinglot.jpg",
+      alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
     },
     link: undefined,
   },
+  // {
+  //   title: "Residential",
+  //   description: "Asphalt and portland cement concrete driveways, sidewalks, drainage, and utility repair for residential customers.",
+  //   image: {
+  //     src: "/residentialdriveway.jpg",
+  //     alt: "A freshly paved, blacktop, single-lane driveway.",
+  //   },
+  //   link: undefined,
+  // },
 ]
 
 export const territoryPage = {
@@ -66,7 +74,7 @@ export const territoryPage = {
    * Introductory paragraph shown at the top of the Where We Work page.
    * Describe the region you serve and any relevant context.
    */
-  intro: `We proudly travel to locations in Chicagoland, especially City of Chicago, Cook and DuPage counties.`,
+  intro: `We mobilize to locations in Chicagoland, especially City of Chicago, Cook and DuPage counties.`,
 
   /**
    * Shown below the city list — use this to note any areas

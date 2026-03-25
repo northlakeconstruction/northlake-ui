@@ -14,7 +14,7 @@ import { Service } from './service'
 export const services: Service[] = [
   {
     slug: "paving",
-    title: "Asphalt Paving and Repairs",
+    title: "Asphalt Paving",
     summary: `Asphalt remains the industry standard for paving throughout the United States,
       with more than 90% of parking lots constructed using this durable, cost-effective, and
       long-lasting material. Its proven reliability and ease of maintenance make it the preferred
@@ -44,41 +44,6 @@ export const services: Service[] = [
           body: `We mill, grade, and pave to specification — coordinating with municipalities
             for permits and traffic control when required. Every job is finished to match
             existing surfaces and meet applicable municipal standards.`,
-        },
-      ],
-      gallery: [],
-    },
-  },
-  {
-    slug: "restoration",
-    title: "Street Restoration",
-    summary: `We handle street restoration for utility contractors with full DOT permitting
-      compliance that includes saw cutting, chipping, sweeping, paving, and thermoplastic
-      markings to match existing surfaces and meet municipal standards.`,
-    serviceType: "Street Restoration",
-    url: "https://northlake-construction.com/services/restoration",
-    card: {
-      image: {
-        src: "/street-restoration.jpg",
-        alt: "A restored city street with fresh thermoplastic markings.",
-      },
-    },
-    detail: {
-      hero: {
-        src: "/street-restoration.jpg",
-        alt: "A restored city street with fresh thermoplastic markings.",
-      },
-      sections: [
-        {
-          heading: "Full DOT Compliance",
-          body: `We manage all permitting, traffic control, and restoration work to DOT
-            standards — so utility contractors can focus on their scope without worrying
-            about the pavement.`,
-        },
-        {
-          heading: "What's Included",
-          body: `Saw cutting, chipping, sweeping, paving, and thermoplastic markings.
-            We match the existing surface texture and color to leave a seamless, inspection-ready result.`,
         },
       ],
       gallery: [],
@@ -119,6 +84,41 @@ export const services: Service[] = [
       gallery: [],
     },
   },
+  {
+    slug: "specialties",
+    title: "Speciality Services",
+    summary: `Beyond traditional asphalt, we create custom concrete installations like seat wall planters, trash enclosures, and decorative stamped concrete. We also specialize in engineered civil work for parks and schools — including athletic fields, basketball and tennis courts, and recreational walking paths.`,
+    serviceType: "Speciality Services",
+    url: "https://northlake-construction.com/services/specialties",
+    card: {
+      image: {
+        src: "/street-restoration.jpg",
+        alt: "A custom concrete specialty project.",
+      },
+    },
+    detail: {
+      hero: {
+        src: "/street-restoration.jpg",
+        alt: "A custom concrete specialty project.",
+      },
+      sections: [
+        {
+          heading: "Custom Concrete Solutions",
+          body: `We build landscape architectural concrete installations tailored to your site,
+            from seat wall planters and trash enclosures to decorative stamped concrete that
+            adds visual appeal and functionality to any project.`,
+        },
+        {
+          heading: "Athletic & Recreation Facilities",
+          body: `We handle engineered civil work for parks and schools, including properly drained
+            athletic fields, basketball courts, tennis courts, and recreational walking paths.
+            Each surface is built to withstand heavy use while maintaining proper drainage and safety standards.`,
+        },
+      ],
+      gallery: [],
+    },
+  },
+  
   {
     slug: "stone",
     title: "Stone Installation and Grading",

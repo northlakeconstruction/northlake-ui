@@ -13,9 +13,9 @@ export const about = {
     bio: [
       `My summer job as a construction laborer evolved into a lifelong profession.
       Through direct, hands-on experience I advanced to be a foreman for one of
-      the largest paving subcontractors in Chicago. After <b>X</b> years leading projects I
+      the largest paving subcontractors in Chicago. After 15 years in the industry I
       developed the 4 disciplines of successful projects: <b>detailed planning, operational
-      discipline, partnering with skilled labor, and following uncompromising safety and
+      discipline, retaining skilled labor, and following uncompromising safety and
       quality standards.</b>`,
       `As a certified Minority Business Enterprise, we serve as a strategic partner
       for organizations seeking to meet participation objectives without compromising

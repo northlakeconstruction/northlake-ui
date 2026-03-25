@@ -83,6 +83,7 @@ export default function Home() {
             width={800}
             alt={about.founder.image.alt}
             className="hidden md:block max-w-4/10"
+            hidden
           />
           <div className="flex flex-col bg-white p-4 gap-4">
             <h2 className="text-center">{about.founder.name}</h2>

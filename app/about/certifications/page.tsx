@@ -8,15 +8,11 @@ export default function CertificationsPage() {
       <h1 className="text-4xl font-[oswald] uppercase tracking-wide mb-6">Certifications</h1>
       <h2>Minority Business Enterprise</h2>
         <p>
-          We are designated by <b>XXX</b> as a Minority Business Enterprise. We are happy 
+          We are designated by the City of Chicago as a Minority Business Enterprise. We are happy 
           to serve as a strategic partner for organizations seeking to meet 
           participation objectives without compromising performance. 
         </p>
       <h2>NAICS Classifications</h2>
-        <p>
-          We are registered with IDOT, CDOT, and local municipalities in Cook and DuPage counties
-          to perform work under the following codes:
-        </p>
         <table className="text-left w-full">
           <thead>
             <tr>
@@ -35,11 +31,6 @@ export default function CertificationsPage() {
             </tr>
           </tbody>
         </table>
-        
-      <h2>Working in the Public Way</h2>
-        <p>
-          We are certified by CDOT and municipalities in Cook and DuPage county to do work in the public way. 
-        </p>
 
     </div>
   )

@@ -29,12 +29,6 @@ const Footer = () => {
                 {contact.email}
               </a>
             </div>
-            <div className="flex flex-row gap-2 items-center">
-              <Phone className="w-[1em] h-[1em] align-middle" />
-              <address className="not-italic">
-                <a className="text-black" href={contact.phoneHref}>{contact.phone}</a>
-              </address>
-            </div>
           </div>
           <div className="flex-col gap-2 text-center content-end">
             <Image
@@ -46,7 +40,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col text-right">
             <span>NACS Codes 237310, 238990</span>
-            <span>MBE Certified Contractor</span>
+            <span>MBE / DBE Certified</span>
           </div>
         </div>
       </div>
