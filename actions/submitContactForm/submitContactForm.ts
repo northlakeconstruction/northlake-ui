@@ -94,7 +94,7 @@ const mailer = async(messageData: submitContactFormProps): Promise<boolean> => {
         })
 
         const response = await fetch(url, { headers: presignedRequest.headers })
-
+        console.log(JSON.stringify(response))
         return response.ok
     } catch (e) {
         console.log((e as Error).toString())
