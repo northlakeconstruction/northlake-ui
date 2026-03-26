@@ -1,7 +1,7 @@
 resource "aws_cloudfront_origin_access_control" "s3" {
   name                              = "${local.app_name}-s3-oac"
   origin_access_control_origin_type = "s3"
-  signing_behavior                  = "sigv4_when_required"
+  signing_behavior                  = "no-override"
   signing_protocol                  = "sigv4"
 }
 
@@ -53,7 +53,10 @@ resource "aws_cloudfront_origin_request_policy" "lambda" {
   comment         = "Origin request policy for Lambda backend"
 
   headers_config {
-    header_behavior = "allViewerExceptHostHeader"
+    header_behavior = "allExcept"
+    headers {
+      items = ["Host"]
+    }
   }
   cookies_config {
     cookie_behavior = "all"
