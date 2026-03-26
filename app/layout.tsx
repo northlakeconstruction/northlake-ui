@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   title: "Northlake Construction",
   description: "Paving Contractor in Chicago",
   icons: {
-    icon: [{url: '/favicon.ico'}]
+    icon: [{url: '/images/favicon.ico'}]
   },
   robots: 'index, follow',
   openGraph: {
     images: [{
-      url: '/header-logo-blue.png',
+      url: '/images/header-logo-blue.png',
       width: 2072,
       height: 634,
       alt: 'Northlake Construction',

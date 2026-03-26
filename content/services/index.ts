@@ -23,13 +23,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/paving",
     card: {
       image: {
-        src: "/paverrear.webp",
+        src: "/images/paverrear.webp",
         alt: "A Northlake paving crew on a public road with the Chicago skyline in the background.",
       },
     },
     detail: {
       hero: {
-        src: "/paverrear.webp",
+        src: "/images/paverrear.webp",
         alt: "A Northlake paving crew on a public road with the Chicago skyline in the background.",
       },
       sections: [
@@ -59,13 +59,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/milling",
     card: {
       image: {
-        src: "/milling.webp",
+        src: "/images/milling.webp",
         alt: "A milling machine removing the surface layer of an asphalt road.",
       },
     },
     detail: {
       hero: {
-        src: "/milling.webp",
+        src: "/images/milling.webp",
         alt: "A milling machine removing the surface layer of an asphalt road.",
       },
       sections: [
@@ -92,13 +92,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/specialties",
     card: {
       image: {
-        src: "/street-restoration.webp",
+        src: "/images/street-restoration.webp",
         alt: "A custom concrete specialty project.",
       },
     },
     detail: {
       hero: {
-        src: "/street-restoration.webp",
+        src: "/images/street-restoration.webp",
         alt: "A custom concrete specialty project.",
       },
       sections: [
@@ -129,13 +129,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/stone",
     card: {
       image: {
-        src: "/stonegrading.webp",
+        src: "/images/stonegrading.webp",
         alt: "Aggregate base being graded and compacted at a job site.",
       },
     },
     detail: {
       hero: {
-        src: "/stonegrading.webp",
+        src: "/images/stonegrading.webp",
         alt: "Aggregate base being graded and compacted at a job site.",
       },
       sections: [
@@ -164,13 +164,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/demolition",
     card: {
       image: {
-        src: "/demolition.webp",
+        src: "/images/demolition.webp",
         alt: "Excavation equipment breaking up an old concrete surface.",
       },
     },
     detail: {
       hero: {
-        src: "/demolition.webp",
+        src: "/images/demolition.webp",
         alt: "Excavation equipment breaking up an old concrete surface.",
       },
       sections: [
@@ -198,13 +198,13 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/concrete",
     card: {
       image: {
-        src: "/driveway.webp",
+        src: "/images/driveway.webp",
         alt: "Freshly poured concrete sidewalk with clean edging.",
       },
     },
     detail: {
       hero: {
-        src: "/driveway.webp",
+        src: "/images/driveway.webp",
         alt: "Freshly poured concrete sidewalk with clean edging.",
       },
       sections: [

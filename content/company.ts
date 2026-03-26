@@ -26,9 +26,9 @@ export const company = {
 
   logo: {
     /** Full-color logo — used in header and footer */
-    color: "/header-logo-blue.png",
+    color: "/images/header-logo-blue.png",
     /** Light/white variant */
-    white: "/header-logo.png",
+    white: "/images/header-logo.png",
   },
 
   openingHours: "Mo-Fr 07:00-17:00",

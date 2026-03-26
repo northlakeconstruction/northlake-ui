@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
 
-const GEO_URL = "/illinois-counties.json"
+const GEO_URL = "/images/illinois-counties.json"
 
 const HIGHLIGHTED: Record<string, string> = {
     "17031": "#243650", // Cook County — primary

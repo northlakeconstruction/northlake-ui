@@ -134,9 +134,9 @@ resource "aws_cloudfront_distribution" "main" {
     compress               = true
   }
 
-  # Origin: Lambda Function URL
+  # Origin: API Gateway
   origin {
-    domain_name = trimsuffix(replace(aws_lambda_function_url.server.function_url, "https://", ""), "/")
+    domain_name = trimsuffix(replace(aws_apigatewayv2_stage.default.invoke_url, "https://", ""), "/")
     origin_id   = "lambda"
 
     custom_origin_config {
@@ -172,6 +172,6 @@ resource "aws_cloudfront_distribution" "main" {
 
   tags = local.tags
 
-  # Ensure certificate and Lambda URL are ready before creating distribution
-  depends_on = [aws_acm_certificate.main, aws_lambda_function_url.server]
+  # Ensure certificate and API Gateway are ready before creating distribution
+  depends_on = [aws_acm_certificate.main, aws_apigatewayv2_stage.default]
 }
