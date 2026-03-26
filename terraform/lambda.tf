@@ -5,7 +5,7 @@ resource "aws_iam_role" "lambda_execution" {
     Version = "2012-10-17"
     Statement = [
       {
-        Effect = "Principal"
+        Effect = "Allow"
         Principal = {
           Service = "lambda.amazonaws.com"
         }
@@ -62,7 +62,7 @@ resource "aws_lambda_function" "server" {
 
   environment {
     variables = {
-      AWS_REGION                      = var.aws_region_sns
+      SNS_REGION                      = var.aws_region_sns
       NEW_LEAD_TOPIC_ARN              = var.sns_topic_arn
       TURNSTILE_VALIDATION_ENDPOINT   = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
       TURNSTILE_SECRET_KEY            = var.turnstile_secret
