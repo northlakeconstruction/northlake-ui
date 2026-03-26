@@ -51,3 +51,12 @@ storybook-static
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform.lock.hcl
+terraform/.terraform.tfvars
+.terraform_lambda_code.zip
+*.tfplan
