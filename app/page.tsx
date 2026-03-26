@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import { SummaryCardArea } from "@/components/layout/summaryCardArea"
 import { ProjectTypeArea } from "@/components/layout/projectTypeArea/ProjectTypeArea"
 import { Hero } from "@/components/layout/hero/Hero"
@@ -18,8 +17,6 @@ const summaryCards = services.map(s => ({
 }))
 
 export default function Home() {
-  const router = useRouter()
-
   return (
     <main>
       <div className="relative">
@@ -28,7 +25,7 @@ export default function Home() {
             <div className="flex flex-col gap-10 items-start max-w-md">
               <h1 className="text-4xl md:text-5xl max-w-2xl">{hero.heading}</h1>
               <h2 className="text-2xl md:text-3xl">{hero.subheading}</h2>
-              <Button onClick={() => { router.push("/contact") }}>{hero.ctaLabel}</Button>
+              <Button asChild><a href="#contact">{hero.ctaLabel}</a></Button>
             </div>
           </Hero>
         </section>

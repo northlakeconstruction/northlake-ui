@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -64,6 +64,7 @@ const Header = (props: HeaderProps) => {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="right">
+                                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                                 <nav className="flex flex-col gap-6 mt-8">
                                     {categories.map(c => (
                                         <div key={c.name} className="flex flex-col gap-2">
@@ -82,7 +83,7 @@ const Header = (props: HeaderProps) => {
                         </Sheet>
                     </div>
 
-                    <Button asChild><Link href="#contact">Contact</Link></Button>
+                    <Button asChild><a href="#contact">Contact</a></Button>
                 </nav>
             </div>
         </header>

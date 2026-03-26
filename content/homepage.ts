@@ -50,8 +50,8 @@ export const projectTypes = [
     link: undefined,
   },
   {
-    title: "Specialty Paving and Earthwork",
-    description: "We install speciality surfaces and structures such as playgrounds, athletic fields, tracks, and recreational paths",
+    title: "Specialty Concrete, Paving, and Earthwork",
+    description: "We install concrete specialities such as seat wall planters and trash enclosures as well as athletic fields and recreational paths.",
     image: {
       src: "/parkinglot.jpg",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
