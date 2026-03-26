@@ -40,7 +40,7 @@ jobs:
 
       - name: Build Next.js
         env:
-          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
         run: npm run build
 
       - name: Build OpenNext bundle
