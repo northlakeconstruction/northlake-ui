@@ -40,7 +40,7 @@ const validateToken = async(token: string): Promise<boolean> => {
     }
 }
 
-const sns = new SNSClient({ region: env.AWS_REGION })
+const sns = new SNSClient({ region: env.SNS_REGION })
 
 const mailer = async(messageData: submitContactFormProps): Promise<boolean> => {
 
