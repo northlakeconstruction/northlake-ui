@@ -5,7 +5,7 @@ export const hero = {
   heading: "Northlake Construction",
   subheading: "A Chicago-based asphalt paving and sitework contractor.",
   image: {
-    src: "/lpaving.jpg",
+    src: "/lpaving.webp",
     alt: "A paving crew in front of the Chicago skyline.",
   },
   ctaLabel: "Get a Quote!",
@@ -35,7 +35,7 @@ export const projectTypes = [
     title: "Municipalities and Governments",
     description: "We are permitted to work in the public right-of-way in Chicago and various municipalities in Cook County under NAICS codes 237310, 238990.",
     image: {
-      src: "/rightofway.jpg",
+      src: "/rightofway.webp",
       alt: "A compactor passes over fresh asphalt on a residential street in Chicago.",
     },
     link: undefined,
@@ -44,7 +44,7 @@ export const projectTypes = [
     title: "Commercial and Residential",
     description: "Full-service site work including earthworks, paving, milling, restoration, and flatwork for schools, parks, retail, commercial, and residential properties.",
     image: {
-      src: "/parkinglot.jpg",
+      src: "/parkinglot.webp",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
     },
     link: undefined,
@@ -53,7 +53,7 @@ export const projectTypes = [
     title: "Specialty Concrete, Paving, and Earthwork",
     description: "We install concrete specialities such as seat wall planters and trash enclosures as well as athletic fields and recreational paths.",
     image: {
-      src: "/parkinglot.jpg",
+      src: "/parkinglot.webp",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
     },
     link: undefined,

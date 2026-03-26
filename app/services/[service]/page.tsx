@@ -4,6 +4,12 @@ import { services } from "@/content/services"
 import { buildServiceSchema } from "@/seo/metadata/service"
 import { ServiceDetail } from "@/components/layout/serviceDetail/ServiceDetail"
 
+export async function generateStaticParams() {
+  return services.map(service => ({
+    service: service.slug,
+  }))
+}
+
 export async function generateMetadata({ params }: ServicePageProps) {
   const { service } = await params
   const pageContent = services.find(s => s.slug === service)

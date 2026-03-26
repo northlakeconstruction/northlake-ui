@@ -29,7 +29,7 @@ const Render = (args: HorizontalCardProps): JSX.Element => {
 
 export const RightImage: Story = {
   args: {
-    image: "/paver.jpg",
+    image: "/paver.webp",
     alt: "An asphalt paving crew",
   },
   render: Render
