@@ -23,7 +23,7 @@ resource "aws_iam_role" "github_actions" {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
           }
           StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:YOUR_GITHUB_ORG/northlake-ui:ref:refs/heads/main"
+            "token.actions.githubusercontent.com:sub" = "repo:northlakeconstruction/northlake-ui:ref:refs/heads/main"
           }
         }
       }
