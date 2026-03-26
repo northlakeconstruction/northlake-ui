@@ -7,7 +7,7 @@ export const about = {
     name: "Ricky Byrdsong Jr.",
     title: "Founder",
     image: {
-      src: "/ricky-portrait.png",
+      src: "/ricky-portrait.jpg",
       alt: "Founder Ricky Byrdsong Jr.",
     },
     bio: [

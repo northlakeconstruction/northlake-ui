@@ -1,15 +1,19 @@
 import { HeroProps } from "./HeroProps"
+import Image from "next/image"
 
 function Hero(props: HeroProps) {
-    const {img, alt, children} = props    
-    
+    const {img, alt, children} = props
+
     return (
         <div className="relative h-[500px] md:h-[600px] w-full">
         {/* Hero Image */}
-        <img
+        <Image
             src={img}
             alt={alt}
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
         />
 
         {/* Gradient Overlay */}
