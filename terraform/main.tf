@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "northlake-tf-state"
+    bucket         = "northlake-construction-tf-state"
     key            = "northlake-ui/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
