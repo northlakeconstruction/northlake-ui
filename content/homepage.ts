@@ -42,7 +42,7 @@ export const projectTypes = [
   },
   {
     title: "Commercial and Residential",
-    description: "Full-service site work including earthworks, paving, milling, restoration, and flatwork for schools, parks, retail, commercial, and residential properties.",
+    description: "Full service asphalt paving and site work including milling, concrete, demolition and earthwork.",
     image: {
       src: "/images/parkinglot.webp",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
