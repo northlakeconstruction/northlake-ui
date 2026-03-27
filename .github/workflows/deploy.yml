@@ -66,13 +66,9 @@ jobs:
 
       - name: Export Terraform outputs
         working-directory: terraform
-        env:
-          TF_LOG: ""
         run: |
-          ASSETS_BUCKET=$(terraform output -raw assets_bucket_name 2>/dev/null)
-          DISTRIBUTION_ID=$(terraform output -raw cloudfront_distribution_id 2>/dev/null)
-          echo "ASSETS_BUCKET_NAME=$ASSETS_BUCKET" >> $GITHUB_ENV
-          echo "CLOUDFRONT_DISTRIBUTION_ID=$DISTRIBUTION_ID" >> $GITHUB_ENV
+          echo "ASSETS_BUCKET_NAME=$(terraform output -raw assets_bucket_name)" >> $GITHUB_ENV
+          echo "CLOUDFRONT_DISTRIBUTION_ID=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_ENV
 
       - name: Sync static assets to S3 (immutable chunks)
         run: |
