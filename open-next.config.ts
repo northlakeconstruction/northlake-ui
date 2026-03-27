@@ -4,4 +4,7 @@ export default {
       incrementalCache: "dummy",
     },
   },
+  dangerous: {
+    allowMissingSourceMap: true,
+  },
 };
