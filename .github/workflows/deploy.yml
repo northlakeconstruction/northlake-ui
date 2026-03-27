@@ -78,12 +78,6 @@ jobs:
             --cache-control "public,max-age=2592000" \
             --delete
 
-      - name: Sync favicon to S3
-        run: |
-          aws s3 cp .open-next/assets/favicon.ico \
-            s3://${{ vars.ASSETS_BUCKET_NAME }}/images/favicon.ico \
-            --cache-control "public,max-age=31536000"
-
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
