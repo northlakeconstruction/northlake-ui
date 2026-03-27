@@ -92,14 +92,14 @@ export const services: Service[] = [
     url: "https://northlake-construction.com/services/specialties",
     card: {
       image: {
-        src: "/images/street-restoration.webp",
-        alt: "A custom concrete specialty project.",
+        src: "/images/tennis.webp",
+        alt: "A tennis court in a city park.",
       },
     },
     detail: {
       hero: {
-        src: "/images/street-restoration.webp",
-        alt: "A custom concrete specialty project.",
+        src: "/images/tennis.webp",
+        alt: "A tennis court in a city park.",
       },
       sections: [
         {

@@ -53,7 +53,7 @@ export const projectTypes = [
     title: "Specialty Concrete, Paving, and Earthwork",
     description: "We install concrete specialities such as seat wall planters and trash enclosures as well as athletic fields and recreational paths.",
     image: {
-      src: "/images/parkinglot.webp",
+      src: "/images/tennis.webp",
       alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
     },
     link: undefined,
