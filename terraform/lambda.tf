@@ -47,6 +47,9 @@ data "archive_file" "lambda_code" {
   type        = "zip"
   source_dir  = "../.open-next/server-functions/default"
   output_path = "../.terraform_lambda_code.zip"
+
+  # Ensure node_modules are included
+  excludes = []
 }
 
 resource "aws_lambda_function" "server" {
@@ -74,12 +77,5 @@ resource "aws_lambda_function" "server" {
   depends_on = [aws_iam_role_policy_attachment.lambda_basic_execution]
 }
 
-resource "aws_lambda_function_url" "server" {
-  function_name          = aws_lambda_function.server.function_name
-  authorization_type    = "NONE"
-  cors {
-    allow_origins = ["*"]
-    allow_methods = ["*"]
-    allow_headers = ["*"]
-  }
-}
+# API Gateway v2 will handle HTTP routing instead of Lambda Function URL
+# This provides proper event format conversion for OpenNext

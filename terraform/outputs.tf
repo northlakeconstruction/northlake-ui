@@ -18,9 +18,9 @@ output "lambda_function_name" {
   value       = aws_lambda_function.server.function_name
 }
 
-output "lambda_function_url" {
-  description = "Lambda function URL"
-  value       = aws_lambda_function_url.server.function_url
+output "api_gateway_url" {
+  description = "API Gateway invoke URL"
+  value       = aws_apigatewayv2_stage.default.invoke_url
 }
 
 output "acm_certificate_arn" {

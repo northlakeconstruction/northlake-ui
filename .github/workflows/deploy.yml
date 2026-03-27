@@ -77,14 +77,18 @@ jobs:
             --cache-control "public,max-age=31536000,immutable" \
             --delete
 
-      - name: Sync public assets to S3 (images, 30-day cache)
+      - name: Sync images to S3 (30-day cache)
         run: |
-          aws s3 sync public/ \
+          aws s3 sync .open-next/assets/images/ \
             s3://${{ env.ASSETS_BUCKET_NAME }}/images/ \
             --cache-control "public,max-age=2592000" \
-            --exclude "*.jpg" \
-            --exclude "*.md" \
             --delete
+
+      - name: Sync favicon to S3
+        run: |
+          aws s3 cp .open-next/assets/favicon.ico \
+            s3://${{ env.ASSETS_BUCKET_NAME }}/images/favicon.ico \
+            --cache-control "public,max-age=31536000"
 
       - name: Invalidate CloudFront cache
         run: |
