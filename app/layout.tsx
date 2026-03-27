@@ -22,6 +22,7 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "Northlake Construction",
   description: "Paving Contractor in Chicago",
+  metadataBase: new URL("https://northlake-construction.com"),
   icons: {
     icon: [{url: '/images/favicon.ico'}]
   },
