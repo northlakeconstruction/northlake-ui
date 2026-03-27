@@ -29,7 +29,7 @@ const Header = (props: HeaderProps) => {
                             height="75"
                             width="210"
                         />
-                        <p className="text-primary-fg font-[oswald]">{company.tagline}</p>
+                        <p className="text-primary-fg text-[0.625rem] italic">{company.tagline}</p>
                     </div>
                 </Link>
                 <nav className="flex items-center gap-6">
