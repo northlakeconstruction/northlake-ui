@@ -38,12 +38,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js
-        env:
-          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
-        run: npm run build
+      # - name: Build Next.js
+      #   env:
+      #     NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+      #   run: npm run build
 
       - name: Build OpenNext bundle
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
         run: npx open-next build
 
       - name: Setup Terraform
