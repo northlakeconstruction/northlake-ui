@@ -19,7 +19,6 @@ const lato = Lato({
   weight: ['400'],
 });
 
-
 export const metadata: Metadata = {
   title: "Northlake Construction",
   description: "Paving Contractor in Chicago",

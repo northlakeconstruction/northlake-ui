@@ -79,11 +79,9 @@ jobs:
 
       - name: Sync images to S3 (30-day cache)
         run: |
-          aws s3 sync .open-next/assets/ \
+          aws s3 sync .open-next/assets/images/ \
             s3://${{ env.ASSETS_BUCKET_NAME }}/images/ \
             --cache-control "public,max-age=2592000" \
-            --exclude "_next/*" \
-            --exclude "favicon.ico" \
             --delete
 
       - name: Sync favicon to S3
