@@ -39,8 +39,8 @@ const Footer = () => {
             />
           </div>
           <div className="flex flex-col text-center md:text-right">
-            <span>NAICS Codes 237310, 238990</span>
             <span>MBE / DBE Certified</span>
+            <span className="text-xs">NAICS Codes 237310, 238990</span>
           </div>
         </div>
       </div>
