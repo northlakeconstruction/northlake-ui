@@ -49,15 +49,15 @@ export const projectTypes = [
     },
     link: undefined,
   },
-  {
-    title: "Specialty Concrete, Paving, and Earthwork",
-    description: "We install concrete specialities such as seat wall planters and trash enclosures as well as athletic fields and recreational paths.",
-    image: {
-      src: "/images/tennis.webp",
-      alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
-    },
-    link: undefined,
-  },
+  // {
+  //   title: "Specialty Concrete, Paving, and Earthwork",
+  //   description: "We install concrete specialities such as seat wall planters and trash enclosures as well as athletic fields and recreational paths.",
+  //   image: {
+  //     src: "/images/tennis.webp",
+  //     alt: "A freshly paved and striped parking lot with the Sears Tower in the background.",
+  //   },
+  //   link: undefined,
+  // },
   // {
   //   title: "Residential",
   //   description: "Asphalt and portland cement concrete driveways, sidewalks, drainage, and utility repair for residential customers.",
