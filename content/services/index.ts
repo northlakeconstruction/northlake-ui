@@ -85,41 +85,6 @@ export const services: Service[] = [
     },
   },
   {
-    slug: "specialties",
-    title: "Speciality Services",
-    summary: `Beyond traditional asphalt, we create custom concrete installations like seat wall planters, trash enclosures, and decorative stamped concrete. We also specialize in engineered civil work for parks and schools — including athletic fields, basketball and tennis courts, and recreational walking paths.`,
-    serviceType: "Speciality Services",
-    url: "https://northlake-construction.com/services/specialties",
-    card: {
-      image: {
-        src: "/images/tennis.webp",
-        alt: "A tennis court in a city park.",
-      },
-    },
-    detail: {
-      hero: {
-        src: "/images/tennis.webp",
-        alt: "A tennis court in a city park.",
-      },
-      sections: [
-        {
-          heading: "Custom Concrete Solutions",
-          body: `We build landscape architectural concrete installations tailored to your site,
-            from seat wall planters and trash enclosures to decorative stamped concrete that
-            adds visual appeal and functionality to any project.`,
-        },
-        {
-          heading: "Athletic & Recreation Facilities",
-          body: `We handle engineered civil work for parks and schools, including properly drained
-            athletic fields, basketball courts, tennis courts, and recreational walking paths.
-            Each surface is built to withstand heavy use while maintaining proper drainage and safety standards.`,
-        },
-      ],
-      gallery: [],
-    },
-  },
-  
-  {
     slug: "stone",
     title: "Stone Installation and Grading",
     summary: `We install and fine-grade aggregate base to specification, ensuring accurate
@@ -183,40 +148,6 @@ export const services: Service[] = [
           heading: "Site Integrity",
           body: `Our crews work carefully around utilities, drainage structures, and adjacent
             surfaces to maintain site elevations and avoid damage to surrounding infrastructure.`,
-        },
-      ],
-      gallery: [],
-    },
-  },
-  {
-    slug: "concrete",
-    title: "Concrete Flat Work",
-    summary: `We specialize in sidewalks, curb and gutter, pads, and other site concrete
-      installations. With a focus on durability, ADA compliance, and proper drainage, we
-      provide customers with dependable long-term solutions.`,
-    serviceType: "Concrete Flat Work",
-    url: "https://northlake-construction.com/services/concrete",
-    card: {
-      image: {
-        src: "/images/driveway.webp",
-        alt: "Freshly poured concrete sidewalk with clean edging.",
-      },
-    },
-    detail: {
-      hero: {
-        src: "/images/driveway.webp",
-        alt: "Freshly poured concrete sidewalk with clean edging.",
-      },
-      sections: [
-        {
-          heading: "Sidewalks, Curbs, and Pads",
-          body: `We pour and finish sidewalks, curb and gutter, equipment pads, and other
-            site concrete to specification — with proper slope, jointing, and surface texture.`,
-        },
-        {
-          heading: "ADA Compliance",
-          body: `All pedestrian concrete work is installed to current ADA accessibility
-            standards, including detectable warning surfaces at curb ramps.`,
         },
       ],
       gallery: [],
